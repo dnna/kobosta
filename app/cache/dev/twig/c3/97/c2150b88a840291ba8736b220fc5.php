@@ -33,26 +33,97 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
         // line 7
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
+
     </head>
     <body>
-        <div id=\"welcome-page\">
-            ";
-        // line 11
-        $this->env->loadTemplate("KobostaSiteBundle::welcome.html.twig")->display($context);
-        // line 12
-        echo "        </div>
-        <div id=\"tshirt-slideshow-page\">
-            ";
-        // line 14
-        $this->env->loadTemplate("KobostaSiteBundle::tshirt-slideshow.html.twig")->display($context);
+        <div id=\"wrapper\">
+            <div id=\"mask\">
+                <div id=\"welcome\" class=\"item\">
+                    <div class=\"bottom\">
+                        <a href=\"#tshirts\" class=\"panel downarrow\"><img class=\"arrow\" src=\"";
         // line 15
-        echo "        </div>
-        <div id=\"order-page\">
-            ";
-        // line 17
-        $this->env->loadTemplate("KobostaSiteBundle::order.html.twig")->display($context);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
+        echo "\"></a>
+                    </div>
+                    <div class=\"content\">
+                        ";
         // line 18
-        echo "        </div>
+        $this->env->loadTemplate("KobostaSiteBundle::welcome.html.twig")->display($context);
+        // line 19
+        echo "                    </div>
+                </div>
+                <div id=\"tshirts\" class=\"item\">
+                    <div class=\"top\">
+                        <a href=\"#welcome\" class=\"panel uparrow\"><img class=\"arrow\" src=\"";
+        // line 23
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
+        echo "\"></a>
+                    </div>
+                    <div class=\"bottom\">
+                        <a href=\"#order\" class=\"panel downarrow\"><span>ORDER</span><img class=\"arrow\" src=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
+        echo "\"></a>
+                    </div>
+                    <div class=\"content\">
+                        <table>
+                            <tr>
+                                <td>
+                                    ";
+        // line 32
+        $this->env->loadTemplate("KobostaSiteBundle::tshirts.html.twig")->display($context);
+        // line 33
+        echo "                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id=\"order\" class=\"item\">
+                    <div class=\"top\">
+                        <a href=\"#tshirts\" class=\"panel uparrow\">Tshirts</a>
+                    </div>
+                    <div class=\"content\">
+                        <table>
+                            <tr>
+                                <td>
+                                    ";
+        // line 46
+        $this->env->loadTemplate("KobostaSiteBundle::order.html.twig")->display($context);
+        // line 47
+        echo "                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\"></script>
+        <script src=\"";
+        // line 55
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/js/lib/jquery.scrollTo-1.4.2.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 56
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/js/main.js"), "html", null, true);
+        echo "\"></script>
+        <script>
+            var arrowUrl = \"";
+        // line 58
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
+        echo "\";
+            var selectedArrowUrl = \"";
+        // line 59
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/selectedarrow.png"), "html", null, true);
+        echo "\";
+            var unselectedLogoUrl = \"";
+        // line 60
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/selected_logo.png"), "html", null, true);
+        echo "\";
+            var selectedLogoUrl = \"";
+        // line 61
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/unselected_logo.png"), "html", null, true);
+        echo "\";
+        </script>
     </body>
 </html>";
     }
@@ -75,6 +146,6 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  59 => 6,  53 => 18,  51 => 17,  47 => 15,  45 => 14,  41 => 12,  39 => 11,  32 => 7,  28 => 6,  24 => 5,  18 => 1,);
+        return array (  130 => 6,  122 => 61,  118 => 60,  114 => 59,  110 => 58,  105 => 56,  101 => 55,  91 => 47,  89 => 46,  74 => 33,  72 => 32,  63 => 26,  57 => 23,  51 => 19,  49 => 18,  43 => 15,  32 => 7,  28 => 6,  24 => 5,  18 => 1,);
     }
 }

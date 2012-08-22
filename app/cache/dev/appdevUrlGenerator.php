@@ -24,6 +24,9 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
        '_configurator_step' => true,
        '_configurator_final' => true,
        'home' => true,
+       'welcome' => true,
+       'thsirts' => true,
+       'order' => true,
     );
 
     /**
@@ -99,6 +102,21 @@ class appdevUrlGenerator extends Symfony\Component\Routing\Generator\UrlGenerato
 
     private function gethomeRouteInfo()
     {
-        return array(array (), array (  '_controller' => 'KobostaSiteBundle:Default:index',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+        return array(array (), array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::indexAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/',  ),));
+    }
+
+    private function getwelcomeRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::welcomeAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/ajax/welcome',  ),));
+    }
+
+    private function getthsirtsRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::thsirtsAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/ajax/thsirts',  ),));
+    }
+
+    private function getorderRouteInfo()
+    {
+        return array(array (), array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::orderAction',), array (), array (  0 =>   array (    0 => 'text',    1 => '/ajax/order',  ),));
     }
 }

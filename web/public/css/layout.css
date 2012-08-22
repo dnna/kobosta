@@ -1,4 +1,89 @@
-root { 
-    display: block;
+body {
+    color: #FFFFFF;
+    background: #000000 url('../images/background.png') no-repeat fixed center; 
 }
 
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;left:0;
+    overflow:hidden;
+}
+ 
+#mask {
+    width:500%;
+    height:100%;
+}
+
+.item {
+    width: 100%;
+    height:100%;
+    position: relative;
+}
+
+.clear {
+    clear:both;
+}
+
+/* Vertical align */
+.content {
+    height: 80%;
+    text-align: center;
+}
+
+table {
+    height: 100%;
+    width: 100%;
+}
+
+table td {
+    text-align: center;
+}
+
+/* Arrows */
+.bottom, .top {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+}
+
+.bottom {
+    top: 80%;
+}
+
+.top {
+    top: 5%;
+}
+
+.downarrow img {
+   transform: rotate(180deg);
+   -moz-transform: rotate(180deg);
+   -webkit-transform: rotate(180deg);
+}
+
+/* Welcome Page */
+#logo-text {
+    font-size: 1em;
+    color: #717170;
+    font-family: monospace;
+    letter-spacing: 10px;
+}
+
+/* TShirts Page */
+.panel span {
+    color: #949493;
+    font-family: monospace;
+    letter-spacing: 10px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+.hover span {
+    color: #D4A063;
+}

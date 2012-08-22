@@ -16,7 +16,17 @@ class __TwigTemplate_8205bd6c0f59b76280843fee2312171a extends Twig_Template
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        echo "Test";
+        echo "<div id='logo'>
+    <img src=\"";
+        // line 2
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/unselected_logo.png"), "html", null, true);
+        echo "\" alt=\"Logo\" />
+</div>
+<div id='logo-text'>
+    EACHMONTH / ONEDESIGN / IOOTSHIRTS
+</div>
+<div id='move-to-tshirts'>
+</div>";
     }
 
     public function getTemplateName()
@@ -24,8 +34,13 @@ class __TwigTemplate_8205bd6c0f59b76280843fee2312171a extends Twig_Template
         return "KobostaSiteBundle::welcome.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  17 => 1,  51 => 6,  41 => 12,  39 => 11,  32 => 7,  28 => 6,  24 => 5,  18 => 1,);
+        return array (  20 => 2,  17 => 1,);
     }
 }

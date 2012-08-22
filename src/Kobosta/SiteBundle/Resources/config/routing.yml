@@ -3,3 +3,21 @@ home:
     defaults:	{ _controller: KobostaSiteBundle:Default:index }
     options:
         expose: true
+
+welcome:
+    pattern:	/ajax/welcome
+    defaults:	{ _controller: KobostaSiteBundle:Default:welcome }
+    options:
+        expose: true
+
+thsirts:
+    pattern:	/ajax/thsirts
+    defaults:	{ _controller: KobostaSiteBundle:Default:thsirts }
+    options:
+        expose: true
+
+order:
+    pattern:	/ajax/order
+    defaults:	{ _controller: KobostaSiteBundle:Default:order }
+    options:
+        expose: true

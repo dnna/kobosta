@@ -89,7 +89,22 @@ class appdevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             if (substr($pathinfo, -1) !== '/') {
                 return $this->redirect($pathinfo.'/', 'home');
             }
-            return array (  '_controller' => 'KobostaSiteBundle:Default:index',  '_route' => 'home',);
+            return array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::indexAction',  '_route' => 'home',);
+        }
+
+        // welcome
+        if ($pathinfo === '/ajax/welcome') {
+            return array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::welcomeAction',  '_route' => 'welcome',);
+        }
+
+        // thsirts
+        if ($pathinfo === '/ajax/thsirts') {
+            return array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::thsirtsAction',  '_route' => 'thsirts',);
+        }
+
+        // order
+        if ($pathinfo === '/ajax/order') {
+            return array (  '_controller' => 'Kobosta\\SiteBundle\\Controller\\DefaultController::orderAction',  '_route' => 'order',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

@@ -1,0 +1,18 @@
+# Bootstrap
+*.swp
+*~
+app/bootstrap*
+
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/upload/*
+web/bundles/*
+
+# Configuration files
+app/config/parameters.ini
+app/config/parameters.yml
+
+/nbproject/private/
+

@@ -37,7 +37,7 @@
                 </div>
                 <div id="order" class="item">
                     <div class="top">
-                        <a href="#tshirts" class="panel uparrow">Tshirts</a>
+                        <a href="#tshirts" class="panel uparrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
                     </div>
                     <div class="content">
                         <table>
@@ -53,12 +53,19 @@
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
         <script src="{{ asset('public/js/lib/jquery.scrollTo-1.4.2.js') }}"></script>
+        <script src="{{ asset('public/js/lib/jquery.transitionBox.min.js') }}"></script>
         <script src="{{ asset('public/js/main.js') }}"></script>
         <script>
             var arrowUrl = "{{ asset('public/images/arrow.png') }}";
             var selectedArrowUrl = "{{ asset('public/images/selectedarrow.png') }}";
             var unselectedLogoUrl = "{{ asset('public/images/selected_logo.png') }}";
             var selectedLogoUrl = "{{ asset('public/images/unselected_logo.png') }}";
+
+            {# Tshirts #}
+            var monthlyTshirts = {};
+            {% for date, tshirt in {'08_2012': 'public/images/monthly/08_2012', '09_2012': 'public/images/monthly/09_2012'} %}
+                monthlyTshirts['{{date}}'] = '{{asset(tshirt)}}';
+            {% endfor %}
         </script>
     </body>
 </html>

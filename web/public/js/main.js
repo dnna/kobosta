@@ -37,6 +37,13 @@ $(document).ready(function() {
     $('#logo img').mouseover(function() {$(this).attr('src', unselectedLogoUrl)});
     $('#logo img').mouseout(function() {$(this).attr('src', selectedLogoUrl)});
 
+    // Tshirt month select
+    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"width" : 600, "height": 450});
+    $('#tshirts-prevmonth, #tshirts-nextmonth').click(function() {
+        changeMonth($(this).data('month'));
+    });
+    changeMonth(new Date(), 0);
+
     resizePanel(); // This HAS to be last
 });
 
@@ -55,4 +62,35 @@ function resizePanel() {
  
     //if the item is displayed incorrectly, set it to the corrent pos
     $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+}
+
+function changeMonth(month, duration) {
+    if(typeof duration == "undefined") {
+        duration = 500;
+    }
+    function pad(num, size) {
+        var s = num+"";
+        while (s.length < size) s = "0" + s;
+        return s;
+    }
+    $('#tshirts-prevmonth').hide();
+    $('#tshirts-nextmonth').hide();
+    myTransitionBoxApi.show(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()]+'/logo.png', 'slideright', duration, 'linear', true, function() {
+        myTransitionBoxApi.clearCache();
+        var prevMonth = new Date(new Date(month).setMonth(month.getMonth()-1));
+        var nextMonth = new Date(new Date(month).setMonth(month.getMonth()+1));
+        if(typeof monthlyTshirts[pad(prevMonth.getMonth()+1, 2)+'_'+prevMonth.getFullYear()] != "undefined") {
+            $('#tshirts-prevmonth').show();
+            $('#tshirts-prevmonth').data('month', prevMonth);
+        } else {
+            $('#tshirts-prevmonth').hide();
+        }
+        if(typeof monthlyTshirts[pad(nextMonth.getMonth()+1, 2)+'_'+nextMonth.getFullYear()] != "undefined") {
+            $('#tshirts-nextmonth').show();
+            $('#tshirts-nextmonth').data('month', nextMonth);
+        } else {
+            $('#tshirts-nextmonth').hide();
+        }
+    });
+    $('#order-left img').attr('src', monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()]+'/order.png');
 }

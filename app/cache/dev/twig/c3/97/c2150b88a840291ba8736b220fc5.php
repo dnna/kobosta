@@ -80,7 +80,10 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
                 </div>
                 <div id=\"order\" class=\"item\">
                     <div class=\"top\">
-                        <a href=\"#tshirts\" class=\"panel uparrow\">Tshirts</a>
+                        <a href=\"#tshirts\" class=\"panel uparrow\"><img class=\"arrow\" src=\"";
+        // line 40
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
+        echo "\"></a>
                     </div>
                     <div class=\"content\">
                         <table>
@@ -104,26 +107,51 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
         echo "\"></script>
         <script src=\"";
         // line 56
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/js/lib/jquery.transitionBox.min.js"), "html", null, true);
+        echo "\"></script>
+        <script src=\"";
+        // line 57
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/js/main.js"), "html", null, true);
         echo "\"></script>
         <script>
             var arrowUrl = \"";
-        // line 58
+        // line 59
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
         echo "\";
             var selectedArrowUrl = \"";
-        // line 59
+        // line 60
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/selectedarrow.png"), "html", null, true);
         echo "\";
             var unselectedLogoUrl = \"";
-        // line 60
+        // line 61
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/selected_logo.png"), "html", null, true);
         echo "\";
             var selectedLogoUrl = \"";
-        // line 61
+        // line 62
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/unselected_logo.png"), "html", null, true);
         echo "\";
-        </script>
+
+            ";
+        // line 65
+        echo "            var monthlyTshirts = {};
+            ";
+        // line 66
+        $context['_parent'] = (array) $context;
+        $context['_seq'] = twig_ensure_traversable(array("08_2012" => "public/images/monthly/08_2012", "09_2012" => "public/images/monthly/09_2012"));
+        foreach ($context['_seq'] as $context["date"] => $context["tshirt"]) {
+            // line 67
+            echo "                monthlyTshirts['";
+            echo twig_escape_filter($this->env, $this->getContext($context, "date"), "html", null, true);
+            echo "'] = '";
+            echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl($this->getContext($context, "tshirt")), "html", null, true);
+            echo "';
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['date'], $context['tshirt'], $context['_parent'], $context['loop']);
+        $context = array_merge($_parent, array_intersect_key($context, $_parent));
+        // line 69
+        echo "        </script>
     </body>
 </html>";
     }
@@ -146,6 +174,6 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  130 => 6,  122 => 61,  118 => 60,  114 => 59,  110 => 58,  105 => 56,  101 => 55,  91 => 47,  89 => 46,  74 => 33,  72 => 32,  63 => 26,  57 => 23,  51 => 19,  49 => 18,  43 => 15,  32 => 7,  28 => 6,  24 => 5,  18 => 1,);
+        return array (  158 => 6,  152 => 69,  141 => 67,  137 => 66,  134 => 65,  129 => 62,  125 => 61,  121 => 60,  117 => 59,  112 => 57,  108 => 56,  104 => 55,  94 => 47,  92 => 46,  83 => 40,  74 => 33,  72 => 32,  63 => 26,  57 => 23,  51 => 19,  49 => 18,  43 => 15,  32 => 7,  28 => 6,  24 => 5,  18 => 1,);
     }
 }

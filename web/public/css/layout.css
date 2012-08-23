@@ -50,6 +50,7 @@ table td {
     position: absolute;
     left: 50%;
     margin-left: -50px;
+    z-index: 10;
 }
 
 .bottom {
@@ -66,15 +67,18 @@ table td {
    -webkit-transform: rotate(180deg);
 }
 
-/* Welcome Page */
-#logo-text {
-    font-size: 1em;
-    color: #717170;
-    font-family: monospace;
-    letter-spacing: 10px;
+.leftarrow img {
+   transform: rotate(90deg);
+   -moz-transform: rotate(90deg);
+   -webkit-transform: rotate(90deg);
 }
 
-/* TShirts Page */
+.rightarrow img {
+   transform: rotate(270deg);
+   -moz-transform: rotate(270deg);
+   -webkit-transform: rotate(270deg);
+}
+
 .panel span {
     color: #949493;
     font-family: monospace;
@@ -86,4 +90,80 @@ table td {
 
 .hover span {
     color: #D4A063;
+}
+
+/* Welcome Page */
+#logo-text {
+    font-size: 1em;
+    color: #717170;
+    font-family: monospace;
+    letter-spacing: 10px;
+}
+
+/* TShirts Page */
+#tshirts-pic {
+    display: inline-block;
+}
+
+#tshirts-pic img {
+    margin-left: 30px;
+    margin-top: 5%;
+}
+
+#tshirts-text {
+    color: #D4A063;
+    font-size: 1em;
+    font-family: monospace;
+    letter-spacing: 10px;
+}
+
+#tshirts-text span {
+    color: #C2A788;
+}
+
+#tshirts-prevmonth {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -50px;
+}
+
+#tshirts-nextmonth {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -50px;
+}
+
+/* Order Page */
+#order-content {
+    margin-top: 5%;
+    margin-left: 10%;
+    text-align: center;
+    color: #A7A9AC;
+    font-size: 0.9em;
+}
+
+#order-content * {
+    text-align: left;
+}
+
+#order-content h1 {
+    font-size: 1em;
+}
+
+#order-left {
+    display: inline-block;
+    width: 398px;
+    margin-right: 10%;
+}
+
+#order-right {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+#order-bottom {
+    margin-top: 10%;
 }

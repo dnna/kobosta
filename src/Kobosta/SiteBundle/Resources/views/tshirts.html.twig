@@ -1,6 +1,14 @@
-<ul id="slider1">
-  <li>Slide one content</li>
-  <li>Slide two content</li>
-  <li>Slide three content</li>
-  <li>And so on...</li>
-</ul>
+<div id="tshirts-content">
+    <div id="tshirts-prevmonth">
+        <a href="javascript:void(0)" class="rightarrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
+    </div>
+    <div id="tshirts-nextmonth">
+        <a href="javascript:void(0)" class="leftarrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
+    </div>
+    <div id="tshirts-pic">
+        {#<img src="{{asset('public/images/monthly/'~'now'|date('m_Y')~'/tshirt.png')}}" alt="Tshirt" id="tshirts-pic-raw" />#}
+    </div>
+    <div id="tshirts-text">
+        AUGUST / FISH<span>DESIGN</span> / 72<span>LEFT</span>
+    </div>
+</div>

@@ -34,8 +34,26 @@ $(document).ready(function() {
     $('.arrow').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', arrowUrl)});
 
     // Logo select
-    $('#logo img').mouseover(function() {$(this).attr('src', unselectedLogoUrl)});
-    $('#logo img').mouseout(function() {$(this).attr('src', selectedLogoUrl)});
+    $("#logoselected").hover(
+        function() {
+            $(this).stop().animate({"opacity": "1"}, "slow");
+        },
+        function() {
+            $(this).stop().animate({"opacity": "0"}, "slow");
+        }
+    );
+    //$('#logo img').mouseover(function() {$(this).attr('src', unselectedLogoUrl)});
+    //$('#logo img').mouseout(function() {$(this).attr('src', selectedLogoUrl)});
+    $('.fb').mouseover(function() {$(this).attr('src', selectedFbUrl)});
+    $('.fb').mouseout(function() {$(this).attr('src', fbUrl)});
+    $('.twitter').mouseover(function() {$(this).attr('src', selectedTwitterUrl)});
+    $('.twitter').mouseout(function() {$(this).attr('src', twitterUrl)});
+    $('.blog').mouseover(function() {$(this).attr('src', selectedBlogUrl)});
+    $('.blog').mouseout(function() {$(this).attr('src', blogUrl)});
+    $('.mail').mouseover(function() {$(this).attr('src', selectedMailUrl)});
+    $('.mail').mouseout(function() {$(this).attr('src', mailUrl)});
+    $('.info').mouseover(function() {$(this).attr('src', selectedInfoUrl)});
+    $('.info').mouseout(function() {$(this).attr('src', infoUrl)});
 
     // Tshirt month select
     myTransitionBoxApi = $('#tshirts-pic').transitionBox({"width" : 600, "height": 450});

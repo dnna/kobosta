@@ -14,11 +14,24 @@
                     <div class="bottom">
                         <a href="#tshirts" class="panel downarrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
                     </div>
+                    <div class="bottomleft">
+                        KOBOSTACOM
+                    </div>
                     <div class="content">
                         {% include 'KobostaSiteBundle::welcome.html.twig' %}
                     </div>
                 </div>
                 <div id="tshirts" class="item">
+                    <div class="topright">
+                        <img src="{{asset('public/images/UNSELECTED_FB.png')}}" class="fb" alt="FB" />
+                        <img src="{{asset('public/images/UNSELECTED_TWITTER.png')}}" class="twitter" alt="Twitter" />
+                        <img src="{{asset('public/images/UNSELECTED_BLOG.png')}}" class="blog" alt="Mail" />
+                        <img src="{{asset('public/images/UNSELECTED_MAIL.png')}}" class="mail" alt="Blog" />
+                        <img src="{{asset('public/images/UNSELECTED_INFO.png')}}" class="info" alt="Info" />
+                    </div>
+                    <div class="bottomleft">
+                        KOBOSTACOM
+                    </div>
                     <div class="top">
                         <a href="#welcome" class="panel uparrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
                     </div>
@@ -39,6 +52,16 @@
                     <div class="top">
                         <a href="#tshirts" class="panel uparrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
                     </div>
+                    <div class="topright">
+                        <img src="{{asset('public/images/UNSELECTED_FB.png')}}" class="fb" alt="FB" />
+                        <img src="{{asset('public/images/UNSELECTED_TWITTER.png')}}" class="twitter" alt="Twitter" />
+                        <img src="{{asset('public/images/UNSELECTED_BLOG.png')}}" class="blog" alt="Mail" />
+                        <img src="{{asset('public/images/UNSELECTED_MAIL.png')}}" class="mail" alt="Blog" />
+                        <img src="{{asset('public/images/UNSELECTED_INFO.png')}}" class="info" alt="Info" />
+                    </div>
+                    <div class="bottomleft">
+                        KOBOSTACOM
+                    </div>
                     <div class="content">
                         <table>
                             <tr>
@@ -58,8 +81,19 @@
         <script>
             var arrowUrl = "{{ asset('public/images/arrow.png') }}";
             var selectedArrowUrl = "{{ asset('public/images/selectedarrow.png') }}";
-            var unselectedLogoUrl = "{{ asset('public/images/selected_logo.png') }}";
-            var selectedLogoUrl = "{{ asset('public/images/unselected_logo.png') }}";
+            var unselectedLogoUrl = "{{ asset('public/images/unselected_logo.png') }}";
+            var selectedLogoUrl = "{{ asset('public/images/selected_logo.png') }}";
+
+            var fbUrl = "{{ asset('public/images/UNSELECTED_FB.png') }}";
+            var selectedFbUrl = "{{ asset('public/images/SELECTED_FB.png') }}";
+            var twitterUrl = "{{ asset('public/images/UNSELECTED_TWITTER.png') }}";
+            var selectedTwitterUrl = "{{ asset('public/images/SELECTED_TWITTER.png') }}";
+            var blogUrl = "{{ asset('public/images/UNSELECTED_BLOG.png') }}";
+            var selectedBlogUrl = "{{ asset('public/images/SELECTED_BLOG.png') }}";
+            var mailUrl = "{{ asset('public/images/UNSELECTED_MAIL.png') }}";
+            var selectedMailUrl = "{{ asset('public/images/SELECTED_MAIL.png') }}";
+            var infoUrl = "{{ asset('public/images/UNSELECTED_INFO.png') }}";
+            var selectedInfoUrl = "{{ asset('public/images/SELECTED_INFO.png') }}";
 
             {# Tshirts #}
             var monthlyTshirts = {};

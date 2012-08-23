@@ -92,12 +92,50 @@ table td {
     color: #D4A063;
 }
 
-/* Welcome Page */
-#logo-text {
-    font-size: 1em;
-    color: #717170;
+.topright {
+    position: absolute;
+    right: 2%;
+    top: 10%;
+}
+
+.topright * {
+    vertical-align: middle;
+}
+
+.bottomleft {
+    color: #474746;
     font-family: monospace;
     letter-spacing: 10px;
+    position: absolute;
+    bottom: 10%;
+    left: 2%;
+}
+
+/* Welcome Page */
+#welcome-page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -300px;
+}
+
+#logo-text {
+    font-size: 1em;
+    color: #41403F;
+    font-family: monospace;
+    letter-spacing: 10px;
+    margin-top: 75%;
+}
+
+#logo * {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+
+#logoselected {
+    opacity: 0;
 }
 
 /* TShirts Page */

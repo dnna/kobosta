@@ -45,23 +45,51 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
         echo "\"></a>
                     </div>
+                    <div class=\"bottomleft\">
+                        KOBOSTACOM
+                    </div>
                     <div class=\"content\">
                         ";
-        // line 18
+        // line 21
         $this->env->loadTemplate("KobostaSiteBundle::welcome.html.twig")->display($context);
-        // line 19
+        // line 22
         echo "                    </div>
                 </div>
                 <div id=\"tshirts\" class=\"item\">
+                    <div class=\"topright\">
+                        <img src=\"";
+        // line 26
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_FB.png"), "html", null, true);
+        echo "\" class=\"fb\" alt=\"FB\" />
+                        <img src=\"";
+        // line 27
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_TWITTER.png"), "html", null, true);
+        echo "\" class=\"twitter\" alt=\"Twitter\" />
+                        <img src=\"";
+        // line 28
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_BLOG.png"), "html", null, true);
+        echo "\" class=\"blog\" alt=\"Mail\" />
+                        <img src=\"";
+        // line 29
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_MAIL.png"), "html", null, true);
+        echo "\" class=\"mail\" alt=\"Blog\" />
+                        <img src=\"";
+        // line 30
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_INFO.png"), "html", null, true);
+        echo "\" class=\"info\" alt=\"Info\" />
+                    </div>
+                    <div class=\"bottomleft\">
+                        KOBOSTACOM
+                    </div>
                     <div class=\"top\">
                         <a href=\"#welcome\" class=\"panel uparrow\"><img class=\"arrow\" src=\"";
-        // line 23
+        // line 36
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
         echo "\"></a>
                     </div>
                     <div class=\"bottom\">
                         <a href=\"#order\" class=\"panel downarrow\"><span>ORDER</span><img class=\"arrow\" src=\"";
-        // line 26
+        // line 39
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
         echo "\"></a>
                     </div>
@@ -70,9 +98,9 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
                             <tr>
                                 <td>
                                     ";
-        // line 32
+        // line 45
         $this->env->loadTemplate("KobostaSiteBundle::tshirts.html.twig")->display($context);
-        // line 33
+        // line 46
         echo "                                </td>
                             </tr>
                         </table>
@@ -81,18 +109,43 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
                 <div id=\"order\" class=\"item\">
                     <div class=\"top\">
                         <a href=\"#tshirts\" class=\"panel uparrow\"><img class=\"arrow\" src=\"";
-        // line 40
+        // line 53
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
         echo "\"></a>
+                    </div>
+                    <div class=\"topright\">
+                        <img src=\"";
+        // line 56
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_FB.png"), "html", null, true);
+        echo "\" class=\"fb\" alt=\"FB\" />
+                        <img src=\"";
+        // line 57
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_TWITTER.png"), "html", null, true);
+        echo "\" class=\"twitter\" alt=\"Twitter\" />
+                        <img src=\"";
+        // line 58
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_BLOG.png"), "html", null, true);
+        echo "\" class=\"blog\" alt=\"Mail\" />
+                        <img src=\"";
+        // line 59
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_MAIL.png"), "html", null, true);
+        echo "\" class=\"mail\" alt=\"Blog\" />
+                        <img src=\"";
+        // line 60
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_INFO.png"), "html", null, true);
+        echo "\" class=\"info\" alt=\"Info\" />
+                    </div>
+                    <div class=\"bottomleft\">
+                        KOBOSTACOM
                     </div>
                     <div class=\"content\">
                         <table>
                             <tr>
                                 <td>
                                     ";
-        // line 46
+        // line 69
         $this->env->loadTemplate("KobostaSiteBundle::order.html.twig")->display($context);
-        // line 47
+        // line 70
         echo "                                </td>
                             </tr>
                         </table>
@@ -102,44 +155,85 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
         </div>
         <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js\"></script>
         <script src=\"";
-        // line 55
+        // line 78
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/js/lib/jquery.scrollTo-1.4.2.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 56
+        // line 79
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/js/lib/jquery.transitionBox.min.js"), "html", null, true);
         echo "\"></script>
         <script src=\"";
-        // line 57
+        // line 80
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/js/main.js"), "html", null, true);
         echo "\"></script>
         <script>
             var arrowUrl = \"";
-        // line 59
+        // line 82
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/arrow.png"), "html", null, true);
         echo "\";
             var selectedArrowUrl = \"";
-        // line 60
+        // line 83
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/selectedarrow.png"), "html", null, true);
         echo "\";
             var unselectedLogoUrl = \"";
-        // line 61
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/selected_logo.png"), "html", null, true);
+        // line 84
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/unselected_logo.png"), "html", null, true);
         echo "\";
             var selectedLogoUrl = \"";
-        // line 62
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/unselected_logo.png"), "html", null, true);
+        // line 85
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/selected_logo.png"), "html", null, true);
+        echo "\";
+
+            var fbUrl = \"";
+        // line 87
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_FB.png"), "html", null, true);
+        echo "\";
+            var selectedFbUrl = \"";
+        // line 88
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/SELECTED_FB.png"), "html", null, true);
+        echo "\";
+            var twitterUrl = \"";
+        // line 89
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_TWITTER.png"), "html", null, true);
+        echo "\";
+            var selectedTwitterUrl = \"";
+        // line 90
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/SELECTED_TWITTER.png"), "html", null, true);
+        echo "\";
+            var blogUrl = \"";
+        // line 91
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_BLOG.png"), "html", null, true);
+        echo "\";
+            var selectedBlogUrl = \"";
+        // line 92
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/SELECTED_BLOG.png"), "html", null, true);
+        echo "\";
+            var mailUrl = \"";
+        // line 93
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_MAIL.png"), "html", null, true);
+        echo "\";
+            var selectedMailUrl = \"";
+        // line 94
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/SELECTED_MAIL.png"), "html", null, true);
+        echo "\";
+            var infoUrl = \"";
+        // line 95
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/UNSELECTED_INFO.png"), "html", null, true);
+        echo "\";
+            var selectedInfoUrl = \"";
+        // line 96
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("public/images/SELECTED_INFO.png"), "html", null, true);
         echo "\";
 
             ";
-        // line 65
+        // line 99
         echo "            var monthlyTshirts = {};
             ";
-        // line 66
+        // line 100
         $context['_parent'] = (array) $context;
         $context['_seq'] = twig_ensure_traversable(array("08_2012" => "public/images/monthly/08_2012", "09_2012" => "public/images/monthly/09_2012"));
         foreach ($context['_seq'] as $context["date"] => $context["tshirt"]) {
-            // line 67
+            // line 101
             echo "                monthlyTshirts['";
             echo twig_escape_filter($this->env, $this->getContext($context, "date"), "html", null, true);
             echo "'] = '";
@@ -150,7 +244,7 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['date'], $context['tshirt'], $context['_parent'], $context['loop']);
         $context = array_merge($_parent, array_intersect_key($context, $_parent));
-        // line 69
+        // line 103
         echo "        </script>
     </body>
 </html>";
@@ -174,6 +268,6 @@ class __TwigTemplate_c397c2150b88a840291ba8736b220fc5 extends Twig_Template
 
     public function getDebugInfo()
     {
-        return array (  158 => 6,  152 => 69,  141 => 67,  137 => 66,  134 => 65,  129 => 62,  125 => 61,  121 => 60,  117 => 59,  112 => 57,  108 => 56,  104 => 55,  94 => 47,  92 => 46,  83 => 40,  74 => 33,  72 => 32,  63 => 26,  57 => 23,  51 => 19,  49 => 18,  43 => 15,  32 => 7,  28 => 6,  24 => 5,  18 => 1,);
+        return array (  252 => 6,  246 => 103,  235 => 101,  231 => 100,  228 => 99,  223 => 96,  219 => 95,  215 => 94,  211 => 93,  207 => 92,  203 => 91,  199 => 90,  195 => 89,  191 => 88,  187 => 87,  182 => 85,  178 => 84,  174 => 83,  170 => 82,  165 => 80,  161 => 79,  157 => 78,  147 => 70,  145 => 69,  133 => 60,  129 => 59,  125 => 58,  121 => 57,  117 => 56,  111 => 53,  102 => 46,  100 => 45,  91 => 39,  85 => 36,  76 => 30,  72 => 29,  68 => 28,  64 => 27,  60 => 26,  54 => 22,  52 => 21,  43 => 15,  32 => 7,  28 => 6,  24 => 5,  18 => 1,);
     }
 }

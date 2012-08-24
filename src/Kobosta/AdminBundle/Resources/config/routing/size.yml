@@ -1,0 +1,30 @@
+admin_size:
+    pattern:  /
+    defaults: { _controller: "KobostaAdminBundle:size:index" }
+
+admin_size_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "KobostaAdminBundle:size:show" }
+
+admin_size_new:
+    pattern:  /new
+    defaults: { _controller: "KobostaAdminBundle:size:new" }
+
+admin_size_create:
+    pattern:  /create
+    defaults: { _controller: "KobostaAdminBundle:size:create" }
+    requirements: { _method: post }
+
+admin_size_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "KobostaAdminBundle:size:edit" }
+
+admin_size_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "KobostaAdminBundle:size:update" }
+    requirements: { _method: post }
+
+admin_size_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "KobostaAdminBundle:size:delete" }
+    requirements: { _method: post }

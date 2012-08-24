@@ -88,8 +88,11 @@
 
             {# Tshirts #}
             var monthlyTshirts = {};
-            {% for date, tshirt in {'08_2012': 'public/images/monthly/08_2012', '09_2012': 'public/images/monthly/09_2012'} %}
-                monthlyTshirts['{{date}}'] = '{{asset(tshirt)}}';
+            {% for tshirt in tshirts %}
+                monthlyTshirts['{{"%02d"|format(tshirt.month)}}_{{tshirt.year}}'] = {
+                    'logo': '{{asset(tshirt.logoWebPath)}}',
+                    'fabric': '{{asset(tshirt.fabricWebPath)}}',
+                    };
             {% endfor %}
         </script>
     </body>

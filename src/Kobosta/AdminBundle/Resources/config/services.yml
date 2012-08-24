@@ -1,0 +1,7 @@
+parameters:
+#    kobosta_admin.example.class: Kobosta\AdminBundle\Example
+
+services:
+#    kobosta_admin.example:
+#        class: %kobosta_admin.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

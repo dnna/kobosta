@@ -1,0 +1,13 @@
+admin_home:
+    pattern:	/
+    defaults:	{ _controller: KobostaAdminBundle:Default:index }
+    options:
+        expose: true
+        
+admin_tshirt_res:
+    resource: "@KobostaAdminBundle/Resources/config/routing/tshirt.yml"
+    prefix:   /tshirt
+
+admin_size_res:
+    resource: "@KobostaAdminBundle/Resources/config/routing/size.yml"
+    prefix:   /size

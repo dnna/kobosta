@@ -116,7 +116,7 @@ function changeMonth(month, duration) {
     } else {
         sliderdir = 'slideright';
     }
-    myTransitionBoxApi.show(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()]+'/logo.png', sliderdir, duration, 'linear', true, function() {
+    myTransitionBoxApi.show(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].logo, sliderdir, duration, 'linear', true, function() {
         myTransitionBoxApi.clearCache();
         var prevMonth = new Date(new Date(month).setMonth(month.getMonth()-1));
         var nextMonth = new Date(new Date(month).setMonth(month.getMonth()+1));
@@ -133,5 +133,5 @@ function changeMonth(month, duration) {
             $('#tshirts-nextmonth').hide();
         }
     });
-    $('#order-left img').attr('src', monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()]+'/order.png');
+    $('#order-left img').attr('src', monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].fabric);
 }

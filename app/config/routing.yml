@@ -7,6 +7,6 @@ KobostaSiteBundle:
     resource: "@KobostaSiteBundle/Resources/config/routing.yml"
     prefix:   /
     
-#KobostaAdminBundle:
-#    resource: "@CookistoAdminBundle/Resources/config/routing.yml"
-#    prefix:   /admin
+KobostaAdminBundle:
+    resource: "@KobostaAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin

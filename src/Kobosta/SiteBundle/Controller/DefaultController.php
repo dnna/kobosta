@@ -7,7 +7,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 class DefaultController extends Controller
 {
     public function indexAction() {
-        return $this->render('KobostaSiteBundle::layout.html.twig');
+        return $this->render('KobostaSiteBundle::layout.html.twig', array(
+            'tshirts' => $this->get('doctrine')->getRepository('Kobosta\SiteBundle\Entity\Tshirt')->findAll()
+        ));
     }
 
     public function welcomeAction() {

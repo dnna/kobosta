@@ -57,7 +57,7 @@ $(document).ready(function() {
     $('.info').mouseout(function() {$(this).attr('src', infoUrl)});
 
     // Tshirt month select
-    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"width" : 600, "height": 450});
+    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": 400});
     $('#tshirts-prevmonth, #tshirts-nextmonth').click(function() {
         changeMonth($(this).data('month'));
     });

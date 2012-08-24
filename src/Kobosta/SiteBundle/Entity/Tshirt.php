@@ -58,7 +58,7 @@ class Tshirt
 
      /**
      * @ORM\ManyToMany(targetEntity="Size")
-     * @ORM\JoinTable(name="dish_tags",
+     * @ORM\JoinTable(name="tshirt_sizes",
      *      joinColumns={@ORM\JoinColumn(name="tshirt_id", referencedColumnName="id", onDelete="CASCADE")},
      *      inverseJoinColumns={@ORM\JoinColumn(name="size_id", referencedColumnName="id")}
      *      )

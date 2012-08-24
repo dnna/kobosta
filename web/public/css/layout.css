@@ -131,9 +131,11 @@ table td {
 }
 
 #logo * {
+    left: 50%;
+    margin-left: -55px;
+    margin-top: -25px;
     position: absolute;
-    left: 25%;
-    top: 25%;
+    top: 50%;
 }
 
 #logoselected {

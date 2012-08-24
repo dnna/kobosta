@@ -92,6 +92,8 @@
                 monthlyTshirts['{{"%02d"|format(tshirt.month)}}_{{tshirt.year}}'] = {
                     'logo': '{{asset(tshirt.logoWebPath)}}',
                     'fabric': '{{asset(tshirt.fabricWebPath)}}',
+                    'title': '{{tshirt.title|upper}}',
+                    'description': '{{tshirt.description}}'
                     };
             {% endfor %}
         </script>

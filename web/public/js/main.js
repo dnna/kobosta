@@ -134,4 +134,6 @@ function changeMonth(month, duration) {
         }
     });
     $('#order-left img').attr('src', monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].fabric);
+    $('#order-bottom h1').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].title);
+    $('#order-bottom div').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].description);
 }

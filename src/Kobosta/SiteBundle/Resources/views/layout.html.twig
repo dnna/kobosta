@@ -11,17 +11,9 @@
         <div id="wrapper">
             <div id="mask">
                 <div id="welcome" class="item">
-                    <div class="bottom">
-                        <a href="#tshirts" class="panel downarrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
-                    </div>
                     <div class="bottomleft">
                         KOBOSTACOM
                     </div>
-                    <div class="content">
-                        {% include 'KobostaSiteBundle::welcome.html.twig' %}
-                    </div>
-                </div>
-                <div id="tshirts" class="item">
                     <div class="topright">
                         <img src="{{asset('public/images/unselected_fb.png')}}" class="fb" alt="FB" />
                         <img src="{{asset('public/images/unselected_twitter.png')}}" class="twitter" alt="Twitter" />
@@ -29,9 +21,11 @@
                         <img src="{{asset('public/images/unselected_mail.png')}}" class="mail" alt="Blog" />
                         <img src="{{asset('public/images/unselected_info.png')}}" class="info" alt="Info" />
                     </div>
-                    <div class="bottomleft">
-                        KOBOSTACOM
+                    <div class="content">
+                        {% include 'KobostaSiteBundle::welcome.html.twig' %}
                     </div>
+                </div>
+                <div id="tshirts" class="item">
                     <div class="top">
                         <a href="#welcome" class="panel uparrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
                     </div>
@@ -58,9 +52,6 @@
                         <img src="{{asset('public/images/unselected_blog.png')}}" class="blog" alt="Mail" />
                         <img src="{{asset('public/images/unselected_mail.png')}}" class="mail" alt="Blog" />
                         <img src="{{asset('public/images/unselected_info.png')}}" class="info" alt="Info" />
-                    </div>
-                    <div class="bottomleft">
-                        KOBOSTACOM
                     </div>
                     <div class="content">
                         <table>

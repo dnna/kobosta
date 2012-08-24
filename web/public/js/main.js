@@ -1,18 +1,19 @@
 $(document).ready(function() {
     //get all link with class panel
     $('a.panel').click(function () {
- 
         //reset and highlight the clicked link
         $('a.panel').removeClass('selected');
         $(this).addClass('selected');
-         
+        
         //grab the current item, to be used in resize function
         current = $(this);
-         
-                //scroll it to the destination
-        $('#wrapper').scrollTo($(this).attr('href'), 800);     
-         
-                //cancel the link default behavior
+        
+        //scroll it to the destination
+        $('#wrapper').scrollTo($(this).attr('href'), 800);
+        window.location.hash = '!'+$(this).attr('href').substring(1)
+        ftbmiVisibility($(this).attr('href').substring(1));
+        
+        //cancel the link default behavior
         return false;
     });
 
@@ -61,12 +62,12 @@ $(document).ready(function() {
         changeMonth($(this).data('month'));
     });
     changeMonth(new Date(), 0);
+    $('#tshirts-prevmonth').data('month', new Date());
 
     resizePanel(); // This HAS to be last
 });
 
 function resizePanel() {
- 
     //get the browser width and height
     width = $(window).width();
     height = $(window).height();
@@ -79,7 +80,23 @@ function resizePanel() {
     $('#mask').css({width: width, height: mask_height});
  
     //if the item is displayed incorrectly, set it to the corrent pos
-    $('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+    var hash;
+    if(window.location.hash != '') {
+        hash = '#'+window.location.hash.substring(2);
+    } else {
+        hash = '#welcome';
+    }
+    $('#wrapper').scrollTo(hash, 0);
+    ftbmiVisibility(hash.substring(1));
+}
+
+function ftbmiVisibility(link, speed) {
+    // FTBMi
+    if(link == 'welcome') {
+        $('.topright').stop().animate({"opacity": "0"}, "slow");
+    } else {
+        $('.topright').stop().animate({"opacity": "1"}, "slow");
+    }
 }
 
 function changeMonth(month, duration) {
@@ -93,7 +110,13 @@ function changeMonth(month, duration) {
     }
     $('#tshirts-prevmonth').hide();
     $('#tshirts-nextmonth').hide();
-    myTransitionBoxApi.show(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()]+'/logo.png', 'slideright', duration, 'linear', true, function() {
+    var sliderdir;
+    if(month > $('#tshirts-prevmonth').data('month')) {
+        sliderdir = 'slideleft';
+    } else {
+        sliderdir = 'slideright';
+    }
+    myTransitionBoxApi.show(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()]+'/logo.png', sliderdir, duration, 'linear', true, function() {
         myTransitionBoxApi.clearCache();
         var prevMonth = new Date(new Date(month).setMonth(month.getMonth()-1));
         var nextMonth = new Date(new Date(month).setMonth(month.getMonth()+1));

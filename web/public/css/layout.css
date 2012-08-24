@@ -145,12 +145,12 @@ table td {
 /* TShirts Page */
 #tshirts-pic {
     display: inline-block;
+    margin-top: 2%;
     margin-bottom: 2%;
 }
 
 #tshirts-pic img {
     margin-left: -18px;
-    margin-top: 5%;
 }
 
 #tshirts-text {

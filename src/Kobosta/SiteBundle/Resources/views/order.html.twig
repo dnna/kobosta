@@ -14,10 +14,16 @@
         </div>
         <div id='order-sizes'>
             <h1>SIZES</h1>
-            S M L XL XXL
+            <div></div>
         </div>
         <div id='order-now-button'>
             ORDER NOW
+            <form action="{{ path('order') }}" method="post" {{ form_enctype(form) }}>
+                {{ form_widget(form) }}
+                <p>
+                    <button type="submit">Order</button>
+                </p>
+            </form>
         </div>
     </div>
 </div>

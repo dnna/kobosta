@@ -85,6 +85,11 @@ class Tshirt
      */
     public $fabric;
 
+    /**
+     * @ORM\OneToMany(targetEntity="TshirtOrder", mappedBy="tshirt")
+     */
+    private $orders;
+
     public function __construct() {
         $this->lastupdate = new \DateTime();
     }
@@ -143,6 +148,14 @@ class Tshirt
 
     public function setSizes($sizes) {
         $this->sizes = $sizes;
+    }
+
+    public function getOrders() {
+        return $this->orders;
+    }
+
+    public function setOrders($orders) {
+        $this->orders = $orders;
     }
 
     public function getLogoAbsolutePath()
@@ -238,5 +251,9 @@ class Tshirt
     {
         $this->removeLogoUpload();
         $this->removeFabricUpload();
+    }
+
+    public function __toString() {
+        return $this->getTitle();
     }
 }

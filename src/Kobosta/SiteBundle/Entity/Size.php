@@ -28,6 +28,10 @@ class Size
      */
     private $name;
 
+    /**
+     * @ORM\OneToMany(targetEntity="TshirtOrder", mappedBy="size")
+     */
+    private $orders;
 
     /**
      * Get id
@@ -57,6 +61,14 @@ class Size
     public function getName()
     {
         return $this->name;
+    }
+
+    public function getOrders() {
+        return $this->orders;
+    }
+
+    public function setOrders($orders) {
+        $this->orders = $orders;
     }
 
     public function __toString() {

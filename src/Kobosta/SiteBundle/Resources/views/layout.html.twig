@@ -90,10 +90,12 @@
             var monthlyTshirts = {};
             {% for tshirt in tshirts %}
                 monthlyTshirts['{{"%02d"|format(tshirt.month)}}_{{tshirt.year}}'] = {
+                    'tshirtid': '{{tshirt.id}}',
                     'logo': '{{asset(tshirt.logoWebPath)}}',
                     'fabric': '{{asset(tshirt.fabricWebPath)}}',
                     'title': '{{tshirt.title|upper}}',
-                    'description': '{{tshirt.description}}'
+                    'description': '{{tshirt.description}}',
+                    'sizes': { {% for size in tshirt.sizes %}'{{size.id}}': '{{size.name}}',{% endfor %} }
                     };
             {% endfor %}
         </script>

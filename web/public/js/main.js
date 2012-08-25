@@ -29,10 +29,19 @@ $(document).ready(function() {
             $('<img/>')[0].src = this;
         });
     }
-    $([selectedArrowUrl]).preload();
+    $([selectedUpUrl, selectedDownUrl, selectedLeftUrl, selectedRightUrl]).preload();
     // Arrows select
-    $('.arrow').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedArrowUrl)});
-    $('.arrow').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', arrowUrl)});
+    $('.uparrow img').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedUpUrl)});
+    $('.uparrow img').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', unselectedUpUrl)});
+    $('.downarrow img').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedDownUrl)});
+    $('.downarrow img').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', unselectedDownUrl)});
+    $('.leftarrow img').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedLeftUrl)});
+    $('.leftarrow img').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', unselectedLeftUrl)});
+    $('.rightarrow img').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedRightUrl)});
+    $('.rightarrow img').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', unselectedRightUrl)});
+    // Order button fix
+    $('.orderdown').mouseover(function() {$(this).addClass('hover'); $(this).find('img').attr('src', selectedDownUrl)});
+    $('.orderdown').mouseout(function() {$(this).removeClass('hover'); $(this).find('img').attr('src', unselectedDownUrl)});
 
     // Logo select
     $("#logoselected").hover(

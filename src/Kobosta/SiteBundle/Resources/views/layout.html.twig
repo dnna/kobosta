@@ -27,10 +27,10 @@
                 </div>
                 <div id="tshirts" class="item">
                     <div class="top">
-                        <a href="#welcome" class="panel uparrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
+                        <a href="#welcome" class="panel uparrow"><img class="arrow" src="{{asset('public/images/unselected_up.png')}}"></a>
                     </div>
                     <div class="bottom">
-                        <a href="#order" class="panel downarrow"><span>ORDER</span><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
+                        <a href="#order" class="panel downarrow orderdown"><span>ORDER</span><img class="arrow" src="{{asset('public/images/unselected_down.png')}}"></a>
                     </div>
                     <div class="content">
                         <table>
@@ -44,7 +44,7 @@
                 </div>
                 <div id="order" class="item">
                     <div class="top">
-                        <a href="#tshirts" class="panel uparrow"><img class="arrow" src="{{asset('public/images/arrow.png')}}"></a>
+                        <a href="#tshirts" class="panel uparrow"><img class="arrow" src="{{asset('public/images/unselected_up.png')}}"></a>
                     </div>
                     <div class="topright">
                         <img src="{{asset('public/images/unselected_fb.png')}}" class="fb" alt="FB" />
@@ -70,8 +70,14 @@
         <script src="{{ asset('public/js/lib/jquery.transitionBox.min.js') }}"></script>
         <script src="{{ asset('public/js/main.js') }}"></script>
         <script>
-            var arrowUrl = "{{ asset('public/images/arrow.png') }}";
-            var selectedArrowUrl = "{{ asset('public/images/selectedarrow.png') }}";
+            var unselectedUpUrl = "{{ asset('public/images/unselected_up.png') }}";
+            var selectedUpUrl = "{{ asset('public/images/selected_up.png') }}";
+            var unselectedDownUrl = "{{ asset('public/images/unselected_down.png') }}";
+            var selectedDownUrl = "{{ asset('public/images/selected_down.png') }}";
+            var unselectedLeftUrl = "{{ asset('public/images/unselected_left.png') }}";
+            var selectedLeftUrl = "{{ asset('public/images/selected_left.png') }}";
+            var unselectedRightUrl = "{{ asset('public/images/unselected_right.png') }}";
+            var selectedRightUrl = "{{ asset('public/images/selected_right.png') }}";
             var unselectedLogoUrl = "{{ asset('public/images/unselected_logo.png') }}";
             var selectedLogoUrl = "{{ asset('public/images/selected_logo.png') }}";
 

@@ -1,6 +1,6 @@
 body {
     color: #FFFFFF;
-    background: #000000 url('../images/background.png') no-repeat fixed center; 
+    background: #181D1D url('../images/background.png') no-repeat fixed center;
 }
 
 a {
@@ -66,21 +66,23 @@ table td {
 }
 
 .downarrow img {
-   transform: rotate(180deg);
+   /*transform: rotate(180deg);
    -moz-transform: rotate(180deg);
-   -webkit-transform: rotate(180deg);
+   -webkit-transform: rotate(180deg);*/
 }
 
 .leftarrow img {
-   transform: rotate(90deg);
+    margin-left: 20px;
+   /*transform: rotate(90deg);
    -moz-transform: rotate(90deg);
-   -webkit-transform: rotate(90deg);
+   -webkit-transform: rotate(90deg);*/
 }
 
 .rightarrow img {
-   transform: rotate(270deg);
+    margin-right: 20px;
+   /*transform: rotate(270deg);
    -moz-transform: rotate(270deg);
-   -webkit-transform: rotate(270deg);
+   -webkit-transform: rotate(270deg);*/
 }
 
 .panel span {
@@ -88,8 +90,8 @@ table td {
     font-family: monospace;
     letter-spacing: 10px;
     position: absolute;
-    left: -15px;
-    top: -23px;
+    left: -8px;
+    top: -22px;
 }
 
 .hover span {
@@ -154,7 +156,7 @@ table td {
 }
 
 #tshirts-pic img {
-    margin-left: -21px;
+    margin-left: -14px;
 }
 
 #tshirts-text {

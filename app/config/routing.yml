@@ -7,6 +7,19 @@ KobostaSiteBundle:
     resource: "@KobostaSiteBundle/Resources/config/routing.yml"
     prefix:   /
     
-KobostaAdminBundle:
-    resource: "@KobostaAdminBundle/Resources/config/routing.yml"
-    prefix:   /admin
+#KobostaAdminBundle:
+#    resource: "@KobostaAdminBundle/Resources/config/routing.yml"
+#    prefix:   /admin
+
+sonata_page_cache:
+    resource: '@SonataCacheBundle/Resources/config/routing/cache.xml'
+    prefix: /
+
+admin:
+    resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+    prefix: /admin
+
+_sonata_admin:
+    resource: .
+    type: sonata_admin
+    prefix: /admin

@@ -159,5 +159,5 @@ function changeMonth(month, duration) {
     $('#kobosta_sitebundle_tshirtordertype_size').html(sizesstr);
     $('#order-sizes div').html(sizetextstr.substring(2));
     var tshirt = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()];
-    $('#tshirts-text').html(tshirt.monthtext+' / '+tshirt.title.replace(' ','')+' / '+tshirt.stock+'LEFT');
+    $('#tshirts-text').html(tshirt.monthtext+' / '+tshirt.title.replace(new RegExp(' ', 'g'),'')+' / '+tshirt.stock+'LEFT');
 }

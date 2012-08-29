@@ -20,6 +20,7 @@ $loader->registerNamespaces(array(
     'Knp\Menu'         => __DIR__.'/../vendor/KnpMenu/src',
     //'SimpleThings'     => __DIR__.'/../vendor/bundles',
     'Exporter'         => __DIR__.'/../vendor/exporter/lib',
+    'Stfalcon'         => __DIR__.'/../vendor/bundles',
 ));
 $loader->registerPrefixes(array(
     'Twig_Extensions_' => __DIR__.'/../vendor/twig-extensions/lib',

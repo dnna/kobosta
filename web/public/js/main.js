@@ -16,12 +16,6 @@ $(document).ready(function() {
         //cancel the link default behavior
         return false;
     });
-
-    //resize all the items according to the new browser size
-    $(window).resize(function () {
-        //call the resizePanel function
-        resizePanel();
-    });
     
     // Preload Images
     $.fn.preload = function() {
@@ -67,13 +61,18 @@ $(document).ready(function() {
 
     // Tshirt month select
     myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": 300});
+    curMonth = new Date();
     $('#tshirts-prevmonth, #tshirts-nextmonth').click(function() {
         changeMonth($(this).data('month'));
     });
-    changeMonth(new Date(), 0);
     $('#tshirts-prevmonth').data('month', new Date());
     $('#kobosta_sitebundle_tshirtordertype_tshirt').parent().hide();
 
+    //resize all the items according to the new browser size
+    $(window).resize(function () {
+        //call the resizePanel function
+        resizePanel();
+    });
     resizePanel(); // This HAS to be last
 });
 
@@ -98,6 +97,9 @@ function resizePanel() {
     }
     $('#wrapper').scrollTo(hash, 0);
     ftbmiVisibility(hash.substring(1));
+    $('#tshirts-pic').replaceWith('<div id="tshirts-pic"></div>');
+    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": 300, "width": width});
+    changeMonth(curMonth, 0);
 }
 
 function ftbmiVisibility(link, speed) {
@@ -111,7 +113,7 @@ function ftbmiVisibility(link, speed) {
 
 function changeMonth(month, duration) {
     if(typeof duration == "undefined") {
-        duration = 500;
+        duration = 1000;
     }
     function pad(num, size) {
         var s = num+"";
@@ -126,6 +128,7 @@ function changeMonth(month, duration) {
     } else {
         sliderdir = 'slideright';
     }
+    curMonth = month;
     myTransitionBoxApi.show(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].logo, sliderdir, duration, 'linear', true, function() {
         myTransitionBoxApi.clearCache();
         var prevMonth = new Date(new Date(month).setMonth(month.getMonth()-1));
@@ -155,5 +158,6 @@ function changeMonth(month, duration) {
     }
     $('#kobosta_sitebundle_tshirtordertype_size').html(sizesstr);
     $('#order-sizes div').html(sizetextstr.substring(2));
-    $('#kobosta_sitebundle_tshirtordertype_tshirt').val(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].tshirtid).change();
+    var tshirt = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()];
+    $('#tshirts-text').html(tshirt.monthtext+' / '+tshirt.title.replace(' ','')+' / '+tshirt.stock+'LEFT');
 }

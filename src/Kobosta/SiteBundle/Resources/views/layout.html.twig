@@ -11,7 +11,7 @@
         <div id="wrapper">
             <div id="mask">
                 <div id="welcome" class="item">
-                    <div class="bottomleft">
+                    <div class="topleft">
                         KOBOSTACOM
                     </div>
                     <div class="topright">
@@ -101,7 +101,9 @@
                     'fabric': '{{asset(tshirt.fabricWebPath)}}',
                     'title': '{{tshirt.title|upper}}',
                     'description': '{{tshirt.description}}',
-                    'sizes': { {% for size in tshirt.sizes %}'{{size.id}}': '{{size.name}}',{% endfor %} }
+                    'sizes': { {% for size in tshirt.sizes %}'{{size.id}}': '{{size.name}}',{% endfor %} },
+                    'monthtext': "{{tshirt.monthtext|upper}}",
+                    'stock': {{tshirt.stock}}
                     };
             {% endfor %}
         </script>

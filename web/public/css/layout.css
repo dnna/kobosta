@@ -1,6 +1,7 @@
 body {
     color: #FFFFFF;
-    background: #181D1D url('../images/background.png') no-repeat fixed center;
+    /*background: #181D1D url('../images/background.png') no-repeat fixed center;*/
+    background-color: #000000;
 }
 
 a {
@@ -10,7 +11,7 @@ a {
 #wrapper {
     width:100%;
     height:100%;
-    min-height: 500px;
+    min-height: 800px;
     min-width: 1024px;
     position:absolute;
     top:0;left:0;
@@ -25,7 +26,7 @@ a {
 .item {
     width: 100%;
     height:100%;
-    min-height: 500px;
+    min-height: 800px;
     min-width: 1024px;
     position: relative;
 }
@@ -62,7 +63,7 @@ table td {
 }
 
 .top {
-    top: 5%;
+    top: 7%;
 }
 
 .downarrow img {
@@ -110,16 +111,21 @@ table td {
     margin-left: 10px;
 }
 
-.bottomleft {
+.topleft {
     color: #474746;
     font-family: monospace;
     letter-spacing: 10px;
     position: fixed;
-    bottom: 10%;
+    top: 10%;
     left: 2%;
 }
 
 /* Welcome Page */
+#welcome {
+    background: #181D1D url('../images/background.png');
+    background-position: 53% 100%;
+}
+
 #welcome-page {
     position: absolute;
     top: 50%;
@@ -133,7 +139,8 @@ table td {
     color: #41403F;
     font-family: monospace;
     letter-spacing: 10px;
-    margin-top: 75%;
+    margin-top: 90%;
+    width: 612px;
 }
 
 #logo * {
@@ -141,7 +148,7 @@ table td {
     margin-left: -55px;
     margin-top: -25px;
     position: absolute;
-    top: 50%;
+    top: 40%;
 }
 
 #logoselected {
@@ -176,13 +183,15 @@ table td {
     left: 0;
     top: 50%;
     margin-top: -50px;
+    z-index: 10;
 }
 
 #tshirts-nextmonth {
     position: absolute;
-    right: 0;
+    right: 3%;
     top: 50%;
     margin-top: -50px;
+    z-index: 10;
 }
 
 /* Order Page */

@@ -36,6 +36,12 @@ class Tshirt
     private $month;
 
     /**
+     *
+     * @ORM\Column(name="monthtext", type="string", length=50)
+     */
+    private $monthtext;
+
+    /**
      * @var string $title
      *
      * @ORM\Column(name="year", type="integer")
@@ -55,6 +61,12 @@ class Tshirt
      * @ORM\Column(name="description", type="text", nullable=true)
      */
     private $description;
+
+    /**
+     *
+     * @ORM\Column(name="stock", type="integer")
+     */
+    private $stock;
 
      /**
      * @ORM\ManyToMany(targetEntity="Size")
@@ -118,6 +130,14 @@ class Tshirt
         $this->month = $month;
     }
 
+    public function getMonthtext() {
+        return $this->monthtext;
+    }
+
+    public function setMonthtext($monthtext) {
+        $this->monthtext = $monthtext;
+    }
+
     public function getYear() {
         return $this->year;
     }
@@ -140,6 +160,14 @@ class Tshirt
 
     public function setDescription($description) {
         $this->description = $description;
+    }
+
+    public function getStock() {
+        return $this->stock;
+    }
+
+    public function setStock($stock) {
+        $this->stock = $stock;
     }
 
     public function getSizes() {

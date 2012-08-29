@@ -9,7 +9,7 @@ use Sonata\AdminBundle\Show\ShowMapper;
 
 use Knp\Menu\ItemInterface as MenuItemInterface;
 
-class TshirtAdmin extends Admin
+class TextAdmin extends Admin
 {
     /**
      * @param \Sonata\AdminBundle\Show\ShowMapper $showMapper
@@ -19,15 +19,8 @@ class TshirtAdmin extends Admin
     protected function configureShowField(ShowMapper $showMapper)
     {
         $showMapper
-            ->add('month')
-            ->add('monthtext')
-            ->add('year')
-            ->add('title')
-            ->add('description')
-            ->add('stock')
-            ->add('sizes')
-            ->add('logoWebPath', 'image')
-            ->add('fabricWebPath', 'image')
+            ->add('id')
+            ->add('text')
         ;
     }
 
@@ -39,15 +32,8 @@ class TshirtAdmin extends Admin
     protected function configureFormFields(FormMapper $formMapper)
     {
         $formMapper
-            ->add('month')
-            ->add('monthtext')
-            ->add('year')
-            ->add('title')
-            ->add('description')
-            ->add('stock')
-            ->add('sizes')
-            ->add('logo', 'file')
-            ->add('fabric', 'file')
+            ->add('id')
+            ->add('text','textarea',array('attr' => array('class' => 'tinymce')))
         ;
     }
 
@@ -65,15 +51,7 @@ class TshirtAdmin extends Admin
                     'edit' => array(),
             )))
             ->addIdentifier('id')
-            ->add('month')
-            ->add('monthtext')
-            ->add('year')
-            ->add('title')
-            ->add('description')
-            ->add('stock')
-            ->add('sizes')
-            ->add('logoWebPath', 'image', array('required' => false))
-            ->add('fabricWebPath', 'image', array('required' => false))
+            ->add('text')
         ;
     }
 
@@ -85,11 +63,7 @@ class TshirtAdmin extends Admin
     protected function configureDatagridFilters(DatagridMapper $datagridMapper)
     {
         $datagridMapper
-            ->add('month')
-            ->add('year')
-            ->add('title')
-            ->add('description')
-            ->add('sizes')
+            ->add('text')
         ;
     }
 }

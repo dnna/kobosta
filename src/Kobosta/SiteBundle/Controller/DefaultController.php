@@ -14,6 +14,7 @@ class DefaultController extends Controller
         
         return $this->render('KobostaSiteBundle::layout.html.twig', array(
             'tshirts' => $this->get('doctrine')->getRepository('Kobosta\SiteBundle\Entity\Tshirt')->findAll(),
+            'texts' => $this->get('doctrine')->getRepository('Kobosta\SiteBundle\Entity\Text'),
             'form'   => $form->createView()
         ));
     }

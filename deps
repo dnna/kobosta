@@ -102,3 +102,7 @@
 [EntityAudit]
     git=git://github.com/simplethings/EntityAudit.git
     target=/bundles/SimpleThings/EntityAudit
+
+[TinymceBundle]
+    git=git://github.com/stfalcon/TinymceBundle.git
+    target=/bundles/Stfalcon/Bundle/TinymceBundle

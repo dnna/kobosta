@@ -48,8 +48,8 @@ class TshirtAdmin extends Admin
             ->add('price')
             ->add('stock')
             ->add('sizes')
-            ->add('logo', 'file')
-            ->add('fabric', 'file')
+            ->add('logo', 'file', array('required' => false))
+            ->add('fabric', 'file', array('required' => false))
         ;
     }
 

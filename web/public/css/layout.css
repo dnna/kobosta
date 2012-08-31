@@ -255,6 +255,12 @@ table td {
     margin-right: 10px;
 }
 
+#order-now-button .sbSelector {
+    background: #181D1D url('../images/order/SIZE_BLANK.png') no-repeat;
+    width: 74px;
+    height: 30px;
+}
+
 #order-left {
     display: inline-block;
     width: 398px;

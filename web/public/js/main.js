@@ -16,7 +16,8 @@ $(document).ready(function() {
         //cancel the link default behavior
         return false;
     });
-    
+    //$("#kobosta_sitebundle_tshirtordertype_size").selectbox();
+
     // Preload Images
     $.fn.preload = function() {
         this.each(function(){

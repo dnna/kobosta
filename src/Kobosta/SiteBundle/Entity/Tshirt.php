@@ -200,6 +200,24 @@ class Tshirt
         $this->orders = $orders;
     }
 
+    public function getLogo() {
+        return $this->logo;
+    }
+
+    public function setLogo($logo) {
+        $this->setLastupdate(new \DateTime());
+        $this->logo = $logo;
+    }
+
+    public function getFabric() {
+        return $this->fabric;
+    }
+
+    public function setFabric($fabric) {
+        $this->setLastupdate(new \DateTime());
+        $this->fabric = $fabric;
+    }
+
     public function getLogoAbsolutePath()
     {
         return null === $this->logoPath ? null : $this->getUploadRootDir().'/'.$this->logoPath;

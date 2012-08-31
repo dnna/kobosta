@@ -2,28 +2,24 @@
     <div id="order-left">
         <img />
         <div id='order-bottom'>
-            <h1></h1>
-            <div></div>
+            <h1><span class="otshirttitle"></span><span class="otshirtprice"></span></h1>
+            <div class="otshirtname"></div>
         </div>
     </div>
     <div id="order-right">
-        <div id='order-description'>
-            <h1>ABOUT KOBOSTA</h1>
-            <p>The travel experience should be much more authentic and unique for each of us. Enough with the boring and copy-paste travels. Enough with the mediocre and rigid tour guide experiences. Enough with the inability to feel the true side of a location. The best travel stories come from trips that you knew that special someone who opened your eyes and took you off the beaten path.</p>
-            <p>Let's create an amazing community of people who have the time and desire to show visitors the true colors of a place. Let's open up every last square mile of this world to be safe, unique and breataking to step onto. Let's make traveling better and let's never look back. We have the means and we have the passion to do so.
-        </div>
-        <div id='order-sizes'>
+        {#<div id='order-sizes'>
             <h1>SIZES</h1>
             <div></div>
-        </div>
+        </div>#}
         <div id='order-now-button'>
-            ORDER NOW
+            <h1>PLEASE FILL THE FOLLOWING</h1>
             <form action="{{ path('order') }}" method="post" {{ form_enctype(form) }}>
                 {{ form_widget(form) }}
                 <p>
                     <button type="submit">Order</button>
                 </p>
             </form>
+            <img src="{{asset('public/images/order/SIZE_T_SHIRT.png')}}" alt="sizes" class="sizesshirt" />
         </div>
     </div>
 </div>

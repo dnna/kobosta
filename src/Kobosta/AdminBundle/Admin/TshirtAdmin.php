@@ -24,6 +24,7 @@ class TshirtAdmin extends Admin
             ->add('year')
             ->add('title')
             ->add('description')
+            ->add('price')
             ->add('stock')
             ->add('sizes')
             ->add('logoWebPath', 'image')
@@ -44,6 +45,7 @@ class TshirtAdmin extends Admin
             ->add('year')
             ->add('title')
             ->add('description')
+            ->add('price')
             ->add('stock')
             ->add('sizes')
             ->add('logo', 'file')
@@ -70,6 +72,7 @@ class TshirtAdmin extends Admin
             ->add('year')
             ->add('title')
             ->add('description')
+            ->add('price')
             ->add('stock')
             ->add('sizes')
             ->add('logoWebPath', 'image', array('required' => false))
@@ -89,6 +92,7 @@ class TshirtAdmin extends Admin
             ->add('year')
             ->add('title')
             ->add('description')
+            ->add('price')
             ->add('sizes')
         ;
     }

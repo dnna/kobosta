@@ -64,6 +64,12 @@ class Tshirt
 
     /**
      *
+     * @ORM\Column(name="price", type="integer")
+     */
+    private $price;
+
+    /**
+     *
      * @ORM\Column(name="stock", type="integer")
      */
     private $stock;
@@ -160,6 +166,14 @@ class Tshirt
 
     public function setDescription($description) {
         $this->description = $description;
+    }
+
+    public function getPrice() {
+        return $this->price;
+    }
+
+    public function setPrice($price) {
+        $this->price = $price;
     }
 
     public function getStock() {

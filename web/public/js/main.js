@@ -23,7 +23,7 @@ $(document).ready(function() {
             $('<img/>')[0].src = this;
         });
     }
-    $([selectedUpUrl, selectedDownUrl, selectedLeftUrl, selectedRightUrl]).preload();
+    $([selectedUpUrl, selectedDownUrl, selectedLeftUrl, selectedRightUrl, selectedFormOrderUrl]).preload();
     // Arrows select
     $('.uparrow img').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedUpUrl)});
     $('.uparrow img').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', unselectedUpUrl)});
@@ -34,8 +34,8 @@ $(document).ready(function() {
     $('.rightarrow img').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedRightUrl)});
     $('.rightarrow img').mouseout(function() {$(this).parent().removeClass('hover'); $(this).attr('src', unselectedRightUrl)});
     // Order button fix
-    $('.orderdown').mouseover(function() {$(this).addClass('hover'); $(this).find('img').attr('src', selectedDownUrl)});
-    $('.orderdown').mouseout(function() {$(this).removeClass('hover'); $(this).find('img').attr('src', unselectedDownUrl)});
+    $('.orderarrow').mouseover(function() {$(this).addClass('hover'); $(this).find('img').attr('src', selectedOrderUrl)});
+    $('.orderarrow').mouseout(function() {$(this).removeClass('hover'); $(this).find('img').attr('src', unselectedOrderUrl)});
 
     // Logo select
     $("#logoselected").hover(
@@ -54,10 +54,20 @@ $(document).ready(function() {
     $('.twitter').mouseout(function() {$(this).attr('src', twitterUrl)});
     $('.blog').mouseover(function() {$(this).attr('src', selectedBlogUrl)});
     $('.blog').mouseout(function() {$(this).attr('src', blogUrl)});
-    $('.mail').mouseover(function() {$(this).attr('src', selectedMailUrl)});
-    $('.mail').mouseout(function() {$(this).attr('src', mailUrl)});
     $('.info').mouseover(function() {$(this).attr('src', selectedInfoUrl)});
     $('.info').mouseout(function() {$(this).attr('src', infoUrl)});
+    
+    $('#order-now-button button').mouseover(function() {$(this).css('background', "#292626 url('"+selectedFormOrderUrl+"')")});
+    $('#order-now-button button').mouseout(function() {$(this).css('background', "#292626 url('"+unselectedFormOrderUrl+"')")});
+
+    // About window
+    $('.info').click(function() {
+        $('#about').css('visibility', 'visible');
+        /*$('#about').css('top', $('#order').scrollTop());*/
+    });
+    $('.xinfo').click(function() {
+        $('#about').css('visibility', 'hidden');
+    });
 
     // Tshirt month select
     myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": 300});
@@ -104,11 +114,11 @@ function resizePanel() {
 
 function ftbmiVisibility(link, speed) {
     // FTBMi
-    if(link == 'welcome') {
+    /*if(link == 'welcome') {
         $('.topright').stop().animate({"opacity": "0"}, "slow");
     } else {
         $('.topright').stop().animate({"opacity": "1"}, "slow");
-    }
+    }*/
 }
 
 function changeMonth(month, duration) {
@@ -147,9 +157,10 @@ function changeMonth(month, duration) {
         }
     });
     $('#order-left img').attr('src', monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].fabric);
-    $('#order-bottom h1').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].title);
-    $('#order-bottom div').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].description);
-    var sizes = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].sizes;
+    $('#order-bottom .otshirttitle').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].title);
+    $('#order-bottom .otshirtname').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].description);
+    $('#order-bottom .otshirtprice').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].price+'&euro;');
+    /*var sizes = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].sizes;
     var sizetextstr = '';
     var sizesstr = '';
     for(size in sizes) {
@@ -157,7 +168,7 @@ function changeMonth(month, duration) {
         sizesstr = sizesstr + '<option value='+size+'>'+sizes[size]+'</option>';
     }
     $('#kobosta_sitebundle_tshirtordertype_size').html(sizesstr);
-    $('#order-sizes div').html(sizetextstr.substring(2));
+    $('#order-sizes div').html(sizetextstr.substring(2));*/
     var tshirt = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()];
     $('#tshirts-text').html(tshirt.monthtext+' / '+tshirt.title.replace(new RegExp(' ', 'g'),'')+' / '+tshirt.stock+'LEFT');
 }

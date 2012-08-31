@@ -14,12 +14,14 @@
                     <div class="topleft">
                         KOBOSTACOM
                     </div>
+                    <div class="bottom">
+                        <a href="#tshirts" class="panel downarrow"><img class="arrow" src="{{asset('public/images/welcome/UNSELECTED_DOWN.png')}}"></a>
+                    </div>
                     <div class="topright">
-                        <img src="{{asset('public/images/unselected_fb.png')}}" class="fb" alt="FB" />
-                        <img src="{{asset('public/images/unselected_twitter.png')}}" class="twitter" alt="Twitter" />
-                        <img src="{{asset('public/images/unselected_blog.png')}}" class="blog" alt="Mail" />
-                        <img src="{{asset('public/images/unselected_mail.png')}}" class="mail" alt="Blog" />
-                        <img src="{{asset('public/images/unselected_info.png')}}" class="info" alt="Info" />
+                        <img src="{{asset('public/images/UNSELECTED_F.png')}}" class="fb" alt="FB" />
+                        <img src="{{asset('public/images/UNSELECTED_T.png')}}" class="twitter" alt="Twitter" />
+                        <img src="{{asset('public/images/UNSELECTED_B.png')}}" class="blog" alt="Blog" />
+                        <img src="{{asset('public/images/UNSELECTED__.png')}}" class="info" alt="Question" />
                     </div>
                     <div class="content">
                         {% include 'KobostaSiteBundle::welcome.html.twig' %}
@@ -27,10 +29,10 @@
                 </div>
                 <div id="tshirts" class="item">
                     <div class="top">
-                        <a href="#welcome" class="panel uparrow"><img class="arrow" src="{{asset('public/images/unselected_up.png')}}"></a>
+                        <a href="#welcome" class="panel uparrow"><img class="arrow" src="{{asset('public/images/main/UNSELECTED_UP.png')}}"></a>
                     </div>
                     <div class="bottom">
-                        <a href="#order" class="panel downarrow orderdown"><span>ORDER</span><img class="arrow" src="{{asset('public/images/unselected_down.png')}}"></a>
+                        <a href="#order" class="panel orderarrow"><img class="arrow" src="{{asset('public/images/main/UNSELECTED_ORDER.png')}}"></a>
                     </div>
                     <div class="content">
                         <table>
@@ -44,20 +46,33 @@
                 </div>
                 <div id="order" class="item">
                     <div class="top">
-                        <a href="#tshirts" class="panel uparrow"><img class="arrow" src="{{asset('public/images/unselected_up.png')}}"></a>
+                        <a href="#tshirts" class="panel uparrow"><img class="arrow" src="{{asset('public/images/main/UNSELECTED_UP.png')}}"></a>
                     </div>
                     <div class="topright">
-                        <img src="{{asset('public/images/unselected_fb.png')}}" class="fb" alt="FB" />
-                        <img src="{{asset('public/images/unselected_twitter.png')}}" class="twitter" alt="Twitter" />
-                        <img src="{{asset('public/images/unselected_blog.png')}}" class="blog" alt="Mail" />
-                        <img src="{{asset('public/images/unselected_mail.png')}}" class="mail" alt="Blog" />
-                        <img src="{{asset('public/images/unselected_info.png')}}" class="info" alt="Info" />
+                        <img src="{{asset('public/images/UNSELECTED_F.png')}}" class="fb" alt="FB" />
+                        <img src="{{asset('public/images/UNSELECTED_T.png')}}" class="twitter" alt="Twitter" />
+                        <img src="{{asset('public/images/UNSELECTED_B.png')}}" class="blog" alt="Blog" />
+                        <img src="{{asset('public/images/UNSELECTED__.png')}}" class="info" alt="Question" />
                     </div>
                     <div class="content">
                         <table>
                             <tr>
                                 <td>
                                     {% include 'KobostaSiteBundle::order.html.twig' %}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="about" class="item">
+                    <div class="topright">
+                        <img src="{{asset('public/images/about/X_INFO.png')}}" class="xinfo" alt="Xinfo" />
+                    </div>
+                    <div class="content">
+                        <table>
+                            <tr>
+                                <td>
+                                    {% include 'KobostaSiteBundle::about.html.twig' %}
                                 </td>
                             </tr>
                         </table>
@@ -70,27 +85,28 @@
         <script src="{{ asset('public/js/lib/jquery.transitionBox.min.js') }}"></script>
         <script src="{{ asset('public/js/main.js') }}"></script>
         <script>
-            var unselectedUpUrl = "{{ asset('public/images/unselected_up.png') }}";
-            var selectedUpUrl = "{{ asset('public/images/selected_up.png') }}";
-            var unselectedDownUrl = "{{ asset('public/images/unselected_down.png') }}";
-            var selectedDownUrl = "{{ asset('public/images/selected_down.png') }}";
-            var unselectedLeftUrl = "{{ asset('public/images/unselected_left.png') }}";
-            var selectedLeftUrl = "{{ asset('public/images/selected_left.png') }}";
-            var unselectedRightUrl = "{{ asset('public/images/unselected_right.png') }}";
-            var selectedRightUrl = "{{ asset('public/images/selected_right.png') }}";
-            var unselectedLogoUrl = "{{ asset('public/images/unselected_logo.png') }}";
-            var selectedLogoUrl = "{{ asset('public/images/selected_logo.png') }}";
+            var unselectedUpUrl = "{{ asset('public/images/main/UNSELECTED_UP.png') }}";
+            var selectedUpUrl = "{{ asset('public/images/main/SELECTED_UP.png') }}";
+            var unselectedDownUrl = "{{ asset('public/images/welcome/UNSELECTED_DOWN.png') }}";
+            var selectedDownUrl = "{{ asset('public/images/welcome/SELECTED_DOWN.png') }}";
+            var unselectedOrderUrl = "{{ asset('public/images/main/UNSELECTED_ORDER.png') }}";
+            var selectedOrderUrl = "{{ asset('public/images/main/SELECTED_ORDER.png') }}";
+            var unselectedLeftUrl = "{{ asset('public/images/main/UNSELECTED_LEFT.png') }}";
+            var selectedLeftUrl = "{{ asset('public/images/main/SELECTED_LEFT.png') }}";
+            var unselectedRightUrl = "{{ asset('public/images/main/UNSELECTED_RIGHT.png') }}";
+            var selectedRightUrl = "{{ asset('public/images/main/SELECTED_RIGHT.png') }}";
 
-            var fbUrl = "{{ asset('public/images/unselected_fb.png') }}";
-            var selectedFbUrl = "{{ asset('public/images/selected_fb.png') }}";
-            var twitterUrl = "{{ asset('public/images/unselected_twitter.png') }}";
-            var selectedTwitterUrl = "{{ asset('public/images/selected_twitter.png') }}";
-            var blogUrl = "{{ asset('public/images/unselected_blog.png') }}";
-            var selectedBlogUrl = "{{ asset('public/images/selected_blog.png') }}";
-            var mailUrl = "{{ asset('public/images/unselected_mail.png') }}";
-            var selectedMailUrl = "{{ asset('public/images/selected_mail.png') }}";
-            var infoUrl = "{{ asset('public/images/unselected_info.png') }}";
-            var selectedInfoUrl = "{{ asset('public/images/selected_info.png') }}";
+            var fbUrl = "{{ asset('public/images/UNSELECTED_F.png') }}";
+            var selectedFbUrl = "{{ asset('public/images/SELECTED_F.png') }}";
+            var twitterUrl = "{{ asset('public/images/UNSELECTED_T.png') }}";
+            var selectedTwitterUrl = "{{ asset('public/images/SELECTED_T.png') }}";
+            var blogUrl = "{{ asset('public/images/UNSELECTED_B.png') }}";
+            var selectedBlogUrl = "{{ asset('public/images/SELECTED_B.png') }}";
+            var infoUrl = "{{ asset('public/images/UNSELECTED__.png') }}";
+            var selectedInfoUrl = "{{ asset('public/images/SELECTED__.png') }}";
+            
+            var unselectedFormOrderUrl = "{{ asset('public/images/order/UNSELECTED_ORDDER.png') }}";
+            var selectedFormOrderUrl = "{{ asset('public/images/order/SELECTED_ORDDER.png') }}";
 
             {# Tshirts #}
             var monthlyTshirts = {};
@@ -103,7 +119,8 @@
                     'description': '{{tshirt.description}}',
                     'sizes': { {% for size in tshirt.sizes %}'{{size.id}}': '{{size.name}}',{% endfor %} },
                     'monthtext': "{{tshirt.monthtext|upper}}",
-                    'stock': {{tshirt.stock}}
+                    'stock': {{tshirt.stock}},
+                    'price': {{tshirt.price}},
                     };
             {% endfor %}
         </script>

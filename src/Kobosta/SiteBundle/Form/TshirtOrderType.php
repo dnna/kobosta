@@ -11,11 +11,11 @@ class TshirtOrderType extends AbstractType
     {
         $builder
             ->add('tshirt')
-            ->add('size')
-            ->add('name')
-            ->add('surname')
-            ->add('email', 'email')
-            ->add('address')
+            ->add('size', null, array('label' => 'SIZE'))
+            ->add('name', null, array('label' => 'NAME'))
+            ->add('surname', null, array('label' => 'SURNAME'))
+            ->add('email', 'email', array('label' => 'EMAIL'))
+            ->add('address', null, array('label' => 'SIZE'))
         ;
     }
 

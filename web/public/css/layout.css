@@ -252,12 +252,11 @@ table td {
 }
 
 #order-content button {
-    width: 135px;
-    height: 61px;
-    text-indent: -9999px;
+    width: 113px;
+    height: 51px;
     white-space: nowrap;
     background: #292626 url('../images/order/UNSELECTED_ORDDER.png');
-    margin-left: 130px;
+    margin-left: 152px;
 }
 
 .sizesshirt {
@@ -315,7 +314,7 @@ table td {
 
 #about table td {
     text-align: left;
-    color: #333130;
+    color: #A7A9AC;
 }
 
 .info, .xinfo {

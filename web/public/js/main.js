@@ -71,6 +71,9 @@ $(document).ready(function() {
     $('.xinfo').click(function() {
         $('#about').css('visibility', 'hidden');
     });
+    $(document).keyup(function(e) {
+        if (e.keyCode == 27) { $('#about').css('visibility', 'hidden'); }   // esc
+    });
 
     // Tshirt month select
     myTransitionBoxApi = $('#tshirts-pic').transitionBox();

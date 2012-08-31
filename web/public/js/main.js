@@ -1,17 +1,19 @@
 $(document).ready(function() {
     //get all link with class panel
-    $('a.panel').click(function () {
+    $(window).bind('hashchange', function() {
         //reset and highlight the clicked link
-        $('a.panel').removeClass('selected');
-        $(this).addClass('selected');
-        
-        //grab the current item, to be used in resize function
-        current = $(this);
+        /*$('a.panel').removeClass('selected');
+        $(this).addClass('selected');*/
         
         //scroll it to the destination
-        $('#wrapper').scrollTo($(this).attr('href'), 800);
-        window.location.hash = '!'+$(this).attr('href').substring(1)
-        ftbmiVisibility($(this).attr('href').substring(1));
+        var hash;
+        if(window.location.hash != '') {
+            hash = '#'+window.location.hash.substring(2);
+        } else {
+            hash = '#welcome';
+        }
+        $('#wrapper').scrollTo(hash, 800);
+        //window.location.hash = '!'+$(this).attr('href').substring(1)
         
         //cancel the link default behavior
         return false;
@@ -107,19 +109,9 @@ function resizePanel() {
         hash = '#welcome';
     }
     $('#wrapper').scrollTo(hash, 0);
-    ftbmiVisibility(hash.substring(1));
     $('#tshirts-pic').replaceWith('<div id="tshirts-pic"></div>');
     myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": ($(window).height()*0.65)});
     changeMonth(curMonth, 0);
-}
-
-function ftbmiVisibility(link, speed) {
-    // FTBMi
-    /*if(link == 'welcome') {
-        $('.topright').stop().animate({"opacity": "0"}, "slow");
-    } else {
-        $('.topright').stop().animate({"opacity": "1"}, "slow");
-    }*/
 }
 
 function changeMonth(month, duration) {

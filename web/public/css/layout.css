@@ -1,3 +1,14 @@
+@font-face {
+	font-family: Neutraface;
+	src: url('fonts/NeutrTexGreLig.otf');
+}
+
+@font-face {
+	font-family: Neutraface;
+	font-weight: bold;
+	src: url('NeutrTexGreBol.otf');
+}
+
 body {
     color: #FFFFFF;
     /*background: #181D1D url('../images/background.png') no-repeat fixed center;*/
@@ -88,7 +99,7 @@ table td {
 
 .panel span {
     color: #949493;
-    font-family: monospace;
+    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     position: absolute;
     left: -8px;
@@ -104,6 +115,7 @@ table td {
     position: fixed;
     right: 4%;
     top: 4%;
+    z-index: 10;
 }
 
 .topright * {
@@ -113,11 +125,12 @@ table td {
 
 .topleft {
     color: #474746;
-    font-family: monospace;
+    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     position: fixed;
     top: 5%;
     left: 2%;
+    z-index: 10;
 }
 
 /* Welcome Page */
@@ -135,9 +148,9 @@ table td {
 }
 
 #logo-text {
-    font-size: 1em;
+    font-size: 0.9em;
     color: #41403F;
-    font-family: monospace;
+    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     margin-top: 75%;
     width: 612px;
@@ -169,7 +182,7 @@ table td {
 #tshirts-text {
     color: #D4A063;
     font-size: 1em;
-    font-family: monospace;
+    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     margin-right: 3%;
 }
@@ -202,6 +215,10 @@ table td {
     color: #A7A9AC;
     font-size: 0.9em;
     text-align: left;
+}
+
+#order-now-button {
+    position: relative;
 }
 
 #order-now-button h1 {
@@ -246,8 +263,8 @@ table td {
 .sizesshirt {
     display: inline-block;
     position: absolute;
-    right: 25%;
-    top: 32%;
+    left: 300px;
+    top: 60px;
 }
 
 .otshirtprice {

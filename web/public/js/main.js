@@ -71,7 +71,7 @@ $(document).ready(function() {
     });
 
     // Tshirt month select
-    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": 300});
+    myTransitionBoxApi = $('#tshirts-pic').transitionBox();
     curMonth = new Date();
     $('#tshirts-prevmonth, #tshirts-nextmonth').click(function() {
         changeMonth($(this).data('month'));
@@ -109,7 +109,7 @@ function resizePanel() {
     $('#wrapper').scrollTo(hash, 0);
     ftbmiVisibility(hash.substring(1));
     $('#tshirts-pic').replaceWith('<div id="tshirts-pic"></div>');
-    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": 300, "width": width});
+    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": ($(window).height()*0.65)});
     changeMonth(curMonth, 0);
 }
 

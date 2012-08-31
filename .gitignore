@@ -7,7 +7,7 @@ app/bootstrap*
 vendor/*
 */logs/*
 */cache/*
-web/tshirts/*
+web/upload/*
 web/bundles/*
 
 # Configuration files

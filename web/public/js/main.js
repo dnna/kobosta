@@ -39,6 +39,9 @@ $(document).ready(function() {
     // Order button fix
     $('.orderarrow').mouseover(function() {$(this).addClass('hover'); $(this).find('img').attr('src', selectedOrderUrl)});
     $('.orderarrow').mouseout(function() {$(this).removeClass('hover'); $(this).find('img').attr('src', unselectedOrderUrl)});
+    // Logo arrow
+    $('.logoarrow').mouseover(function() {$('#logoselected').stop().animate({"opacity": "1"}, "slow");});
+    $('.logoarrow').mouseout(function() {$('#logoselected').stop().animate({"opacity": "0"}, "slow");});
 
     // Logo select
     $("#logoselected").hover(
@@ -92,6 +95,9 @@ $(document).ready(function() {
         resizePanel();
     });
     resizePanel(); // This HAS to be last
+
+    // Fix size select borders
+    $('#kobosta_sitebundle_tshirtordertype_size').wrap('<div class="sbSelector" />');
 });
 
 function resizePanel() {

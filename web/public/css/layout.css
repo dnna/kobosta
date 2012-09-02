@@ -151,11 +151,10 @@ table td {
     color: #A7A9AC;
     letter-spacing: 10px;
     margin-top: 75%;
-    width: 612px;
 }
 
 #logo * {
-    left: 50%;
+    left: 48%;
     margin-left: -55px;
     margin-top: -25px;
     position: absolute;
@@ -227,6 +226,10 @@ table td {
     margin-bottom: 5px;
 }
 
+#order-form {
+    margin-left: 125px;
+}
+
 #order-content label {
     float: left;
     text-align: right;
@@ -237,15 +240,18 @@ table td {
 
 #order-content input {
     width: 185px;
-    padding-left: 5px;
+    padding-left: 7px;
     /*background: #DDB380 url('../images/order/FILL_BLANK.png');*/
 }
 
 #order-content select, input, button {
     background-color: #DDB380;
-    border-radius: 15px;
     border: none;
     height: 20px;
+}
+
+#order-content input, button {
+    border-radius: 15px;
 }
 
 #order-content button {
@@ -268,14 +274,20 @@ table td {
     margin-right: 10px;
 }
 
-#order-now-button .sbSelector {
-    background: #181D1D url('../images/order/SIZE_BLANK.png') no-repeat;
-    width: 74px;
-    height: 30px;
+#order-now-button select {
+    height: 15px;
+    width: 85%;
 }
 
-#order-content select {
-    -webkit-appearance: none;
+#order-now-button .sbSelector {
+    background-color: #DDB380;
+    border-radius: 15px;
+    display: inline-block;
+    margin-bottom: 0;
+    width: 70px;
+    height: 18px;
+    text-align: center;
+    padding-top: 2px;
 }
 
 #order-left {
@@ -333,6 +345,7 @@ table td {
 h1, h2 {
     font-weight: normal;
     color: #E6C49C;
+    white-space:nowrap;
 }
 
 #about .profiles div {

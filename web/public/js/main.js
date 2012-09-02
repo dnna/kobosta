@@ -43,9 +43,11 @@ $(document).ready(function() {
     // Logo select
     $("#logoselected").hover(
         function() {
+            $('.downarrow img').attr('src', selectedDownUrl);
             $(this).stop().animate({"opacity": "1"}, "slow");
         },
         function() {
+            $('.downarrow img').attr('src', unselectedDownUrl);
             $(this).stop().animate({"opacity": "0"}, "slow");
         }
     );
@@ -113,8 +115,9 @@ function resizePanel() {
     }
     $('#wrapper').scrollTo(hash, 0);
     $('#tshirts-pic').replaceWith('<div id="tshirts-pic"></div>');
-    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": Math.round($(window).height()*0.65), "width": width});
+    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": Math.round($(window).height()*0.55), "width": width});
     changeMonth(curMonth, 0);
+    $('#about-inner').innerstaticHeight();
 }
 
 function changeMonth(month, duration) {
@@ -168,3 +171,14 @@ function changeMonth(month, duration) {
     var tshirt = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()];
     $('#tshirts-text').html(tshirt.monthtext+' / '+tshirt.title.replace(new RegExp(' ', 'g'),'')+' / '+tshirt.stock+'LEFT');
 }
+
+(function($) {
+  $.fn.innerstaticHeight = function() {
+        var heightOfOuterfixed = $(window).height(),
+        offset = $('#about-inner').offset(),
+        topOfInnerstatic2 = offset.top,
+        potentialHeight = heightOfOuterfixed - topOfInnerstatic2;
+
+        $('#about-inner').css('height',potentialHeight);
+  }
+})(jQuery);

@@ -270,8 +270,8 @@ table td {
 }
 
 .otshirtprice {
-    float: right;
-    margin-right: 10px;
+    position: absolute;
+    right: 10px;
 }
 
 #order-now-button select {
@@ -346,6 +346,7 @@ h1, h2 {
     font-weight: normal;
     color: #E6C49C;
     white-space:nowrap;
+    position: relative;
 }
 
 #about .profiles div {

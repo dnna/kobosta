@@ -113,7 +113,7 @@ function resizePanel() {
     }
     $('#wrapper').scrollTo(hash, 0);
     $('#tshirts-pic').replaceWith('<div id="tshirts-pic"></div>');
-    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": ($(window).height()*0.65)});
+    myTransitionBoxApi = $('#tshirts-pic').transitionBox({"height": Math.round($(window).height()*0.65), "width": width});
     changeMonth(curMonth, 0);
 }
 

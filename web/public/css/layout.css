@@ -322,6 +322,7 @@ table td {
 }
 
 h1, h2 {
+    font-family: Neutraface, monospace;
     font-weight: normal;
     color: #E6C49C;
 }

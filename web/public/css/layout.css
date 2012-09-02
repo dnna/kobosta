@@ -13,6 +13,7 @@ body {
     color: #FFFFFF;
     /*background: #181D1D url('../images/background.png') no-repeat fixed center;*/
     background-color: #292626;
+    font-family: Neutraface, monospace;
 }
 
 a {
@@ -99,7 +100,6 @@ table td {
 
 .panel span {
     color: #949493;
-    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     position: absolute;
     left: -8px;
@@ -125,7 +125,6 @@ table td {
 
 .topleft {
     color: #474746;
-    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     position: fixed;
     top: 5%;
@@ -150,7 +149,6 @@ table td {
 #logo-text {
     font-size: 0.9em;
     color: #41403F;
-    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     margin-top: 75%;
     width: 612px;
@@ -182,7 +180,6 @@ table td {
 #tshirts-text {
     color: #D4A063;
     font-size: 1em;
-    font-family: Neutraface, monospace;
     letter-spacing: 10px;
     margin-right: 3%;
 }
@@ -322,7 +319,6 @@ table td {
 }
 
 h1, h2 {
-    font-family: Neutraface, monospace;
     font-weight: normal;
     color: #E6C49C;
 }

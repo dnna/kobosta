@@ -342,6 +342,11 @@ table td {
     cursor: pointer;
 }
 
+#about h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
 h1, h2 {
     font-weight: normal;
     color: #E6C49C;

@@ -145,7 +145,7 @@ function changeMonth(month, duration) {
     }
     curMonth = month;
     myTransitionBoxApi.show(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].logo, sliderdir, duration, 'linear', true, function() {
-        myTransitionBoxApi.clearCache();
+        //myTransitionBoxApi.clearCache();
         var prevMonth = new Date(new Date(month).setMonth(month.getMonth()-1));
         var nextMonth = new Date(new Date(month).setMonth(month.getMonth()+1));
         if(typeof monthlyTshirts[pad(prevMonth.getMonth()+1, 2)+'_'+prevMonth.getFullYear()] != "undefined") {

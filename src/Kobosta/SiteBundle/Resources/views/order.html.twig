@@ -12,7 +12,7 @@
             <div></div>
         </div>#}
         <div id='order-now-button'>
-            <h1>PLEASE FILL THE FOLLOWING</h1>
+            <h1>{{ texts.find('order_fill_text').text }}</h1>
             <form id="order-form" action="{{ path('order') }}" method="post" {{ form_enctype(form) }}>
                 {{ form_widget(form) }}
                 <p>

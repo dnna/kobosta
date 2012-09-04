@@ -27,6 +27,7 @@ class OrderAdmin extends Admin
             ->add('surname')
             ->add('email')
             ->add('address')
+            ->add('phone')
         ;
     }
 
@@ -45,6 +46,7 @@ class OrderAdmin extends Admin
             ->add('surname')
             ->add('email')
             ->add('address')
+            ->add('phone')
         ;
     }
 
@@ -69,6 +71,7 @@ class OrderAdmin extends Admin
             ->add('surname')
             ->add('email')
             ->add('address')
+            ->add('phone')
         ;
     }
 
@@ -88,6 +91,7 @@ class OrderAdmin extends Admin
             ->add('surname')
             ->add('email')
             ->add('address')
+            ->add('phone')
         ;
     }
 }

@@ -15,7 +15,8 @@ class TshirtOrderType extends AbstractType
             ->add('name', null, array('label' => 'NAME'))
             ->add('surname', null, array('label' => 'SURNAME'))
             ->add('email', 'email', array('label' => 'EMAIL'))
-            ->add('address', null, array('label' => 'SIZE'))
+            ->add('address', null, array('label' => 'ADDRESS'))
+            ->add('phone', null, array('label' => 'PHONE'))
         ;
     }
 

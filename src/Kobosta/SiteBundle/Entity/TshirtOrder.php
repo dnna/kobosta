@@ -68,6 +68,13 @@ class TshirtOrder
      */
     private $address;
 
+    /**
+     * @var string $address
+     *
+     * @ORM\Column(name="phone", type="string", length=16)
+     */
+    private $phone;
+
     public function getId() {
         return $this->id;
     }
@@ -130,5 +137,13 @@ class TshirtOrder
 
     public function setAddress($address) {
         $this->address = $address;
+    }
+
+    public function getPhone() {
+        return $this->phone;
+    }
+
+    public function setPhone($phone) {
+        $this->phone = $phone;
     }
 }

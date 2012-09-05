@@ -1,3 +1,11 @@
+(function($) {
+    $.fn.preload = function() {
+        this.each(function(){
+            $('<img/>')[0].src = this;
+        });
+    }
+})( jQuery );
+
 $(document).ready(function() {
     //get all link with class panel
     $(window).bind('hashchange', function() {
@@ -21,11 +29,6 @@ $(document).ready(function() {
     //$("#kobosta_sitebundle_tshirtordertype_size").selectbox();
 
     // Preload Images
-    $.fn.preload = function() {
-        this.each(function(){
-            $('<img/>')[0].src = this;
-        });
-    }
     $([selectedUpUrl, selectedDownUrl, selectedLeftUrl, selectedRightUrl, selectedFormOrderUrl]).preload();
     // Arrows select
     $('.uparrow img').mouseover(function() {$(this).parent().addClass('hover'); $(this).attr('src', selectedUpUrl)});

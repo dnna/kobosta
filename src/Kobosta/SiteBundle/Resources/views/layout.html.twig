@@ -118,11 +118,11 @@
                     'price': {{tshirt.price}},
                     };
             {% endfor %}
-            var tshirtlogospreload = new Array();
+            {#var tshirtlogospreload = new Array();
             {% for tshirt in tshirts %}
                 tshirtlogospreload.push("{{asset(tshirt.logoWebPath)}}");
             {% endfor %}
-            $(tshirtlogospreload).preload();
+            $(tshirtlogospreload).preload();#}
         </script>
     </body>
 </html>

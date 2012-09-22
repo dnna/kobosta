@@ -69,7 +69,7 @@ class TshirtOrder
     private $address;
 
     /**
-     * @var string $address
+     * @var string $phone
      *
      * @ORM\Column(name="phone", type="string", length=16)
      */

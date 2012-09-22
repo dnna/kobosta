@@ -110,6 +110,7 @@ class Tshirt
 
     public function __construct() {
         $this->lastupdate = new \DateTime();
+        $this->orders = new \Doctrine\Common\Collections\ArrayCollection();
     }
 
     public function getId() {
@@ -216,6 +217,10 @@ class Tshirt
     public function setFabric($fabric) {
         $this->setLastupdate(new \DateTime());
         $this->fabric = $fabric;
+    }
+
+    public function getRemaining() {
+        return ($this->stock - $this->orders->count());
     }
 
     public function getLogoAbsolutePath()

@@ -123,6 +123,10 @@ table td {
     margin-left: 10px;
 }
 
+.topright a {
+    margin-left: 0;
+}
+
 .topleft {
     color: #474746;
     letter-spacing: 10px;

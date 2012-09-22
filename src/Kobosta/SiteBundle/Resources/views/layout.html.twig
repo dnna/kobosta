@@ -18,9 +18,9 @@
                         <a href="#!tshirts" class="panel logoarrow downarrow"><img class="arrow" src="{{asset('public/images/welcome/UNSELECTED_DOWN.png')}}"></a>
                     </div>
                     <div class="topright">
-                        <img src="{{asset('public/images/UNSELECTED_F.png')}}" class="fb" alt="FB" />
-                        <img src="{{asset('public/images/UNSELECTED_T.png')}}" class="twitter" alt="Twitter" />
-                        <img src="{{asset('public/images/UNSELECTED_B.png')}}" class="blog" alt="Blog" />
+                        <a href="http://www.facebook.com/Kobosta" target="_blank"><img src="{{asset('public/images/UNSELECTED_F.png')}}" class="fb" alt="FB" /></a>
+                        <a href="#" target="_blank"><img src="{{asset('public/images/UNSELECTED_T.png')}}" class="twitter" alt="Twitter" /></a>
+                        <a href="http://blog.kobosta.com/" target="_blank"><img src="{{asset('public/images/UNSELECTED_B.png')}}" class="blog" alt="Blog" /></a>
                         <img src="{{asset('public/images/UNSELECTED__.png')}}" class="info" alt="Question" />
                     </div>
                     <div class="content">
@@ -116,6 +116,7 @@
                     'monthtext': "{{tshirt.monthtext|upper}}",
                     'stock': {{tshirt.stock}},
                     'price': {{tshirt.price}},
+                    'remaining': {{tshirt.remaining}},
                     };
             {% endfor %}
             {#var tshirtlogospreload = new Array();

@@ -147,6 +147,8 @@ table td {
     top: 86%;
     left: 2%;
     z-index: 10;
+    font-size: 0.7em;
+    letter-spacing: 5px;
 }
 
 /* Welcome Page */

@@ -68,8 +68,8 @@ $(document).ready(function() {
     $('.info').mouseover(function() {$(this).attr('src', selectedInfoUrl)});
     $('.info').mouseout(function() {$(this).attr('src', infoUrl)});
     
-    $('#order-now-button button').mouseover(function() {$(this).css('background', "#292626 url('"+selectedFormOrderUrl+"')")});
-    $('#order-now-button button').mouseout(function() {$(this).css('background', "#292626 url('"+unselectedFormOrderUrl+"')")});
+    $('#order-now-button input[type=submit]').mouseover(function() {$(this).css('background', "#292626 url('"+selectedFormOrderUrl+"')")});
+    $('#order-now-button input[type=submit]').mouseout(function() {$(this).css('background', "#292626 url('"+unselectedFormOrderUrl+"')")});
 
     // About window
     $('.info').click(function() {

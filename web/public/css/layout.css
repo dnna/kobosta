@@ -140,6 +140,15 @@ table td {
     z-index: 10;
 }
 
+.bottomleft {
+    color: #474746;
+    letter-spacing: 10px;
+    position: fixed;
+    top: 85%;
+    left: 2%;
+    z-index: 10;
+}
+
 /* Welcome Page */
 #welcome {
     /*background: #181D1D url('../images/background.png');

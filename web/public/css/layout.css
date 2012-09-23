@@ -156,9 +156,15 @@ table td {
 
 #logo-text {
     font-size: 0.9em;
-    color: #A7A9AC;
+    color: #E7C59A;
     letter-spacing: 10px;
     margin-top: 75%;
+}
+
+#logo-text span {
+    color: #D5A15E;
+    font-weight: bold;
+    font-size: 1.2em;
 }
 
 #logo * {

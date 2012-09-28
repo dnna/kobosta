@@ -25,8 +25,11 @@ class TshirtAdmin extends Admin
             ->add('title')
             ->add('description')
             ->add('price')
-            ->add('stock')
-            ->add('sizes')
+            ->add('sstock')
+            ->add('mstock')
+            ->add('lstock')
+            ->add('xlstock')
+            ->add('xxlstock')
             ->add('logoWebPath', 'image')
             ->add('fabricWebPath', 'image')
         ;
@@ -46,8 +49,11 @@ class TshirtAdmin extends Admin
             ->add('title')
             ->add('description')
             ->add('price')
-            ->add('stock')
-            ->add('sizes')
+            ->add('sstock')
+            ->add('mstock')
+            ->add('lstock')
+            ->add('xlstock')
+            ->add('xxlstock')
             ->add('logo', 'file', array('required' => false))
             ->add('fabric', 'file', array('required' => false))
         ;
@@ -73,8 +79,11 @@ class TshirtAdmin extends Admin
             ->add('title')
             ->add('description')
             ->add('price')
-            ->add('stock')
-            ->add('sizes')
+            ->add('sstock')
+            ->add('mstock')
+            ->add('lstock')
+            ->add('xlstock')
+            ->add('xxlstock')
             ->add('logoWebPath', 'image', array('required' => false))
             ->add('fabricWebPath', 'image', array('required' => false))
         ;
@@ -93,7 +102,6 @@ class TshirtAdmin extends Admin
             ->add('title')
             ->add('description')
             ->add('price')
-            ->add('sizes')
         ;
     }
 }

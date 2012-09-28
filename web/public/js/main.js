@@ -26,7 +26,6 @@ $(document).ready(function() {
         //cancel the link default behavior
         return false;
     });
-    //$("#kobosta_sitebundle_tshirtordertype_size").selectbox();
 
     // Preload Images
     $([selectedUpUrl, selectedDownUrl, selectedLeftUrl, selectedRightUrl, selectedFormOrderUrl]).preload();
@@ -100,7 +99,8 @@ $(document).ready(function() {
     resizePanel(); // This HAS to be last
 
     // Fix size select borders
-    $('#kobosta_sitebundle_tshirtordertype_size').wrap('<div class="sbSelector" />');
+    $('select.order-sizes').wrap('<div class="sbSelector" />');
+    $('.order-sizes').parent().addClass('order-sizes-container');
 });
 
 function resizePanel() {
@@ -168,17 +168,23 @@ function changeMonth(month, duration) {
     $('#order-bottom .otshirttitle').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].title);
     $('#order-bottom .otshirtname').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].description);
     $('#order-bottom .otshirtprice').html(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].price+'&euro;');
-    /*var sizes = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].sizes;
-    var sizetextstr = '';
-    var sizesstr = '';
-    for(size in sizes) {
-        sizetextstr = sizetextstr + ', ' + sizes[size];
-        sizesstr = sizesstr + '<option value='+size+'>'+sizes[size]+'</option>';
-    }
-    $('#kobosta_sitebundle_tshirtordertype_size').html(sizesstr);
-    $('#order-sizes div').html(sizetextstr.substring(2));*/
     var tshirt = monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()];
+    $('#kobosta_sitebundle_tshirtordertype_tshirt').val(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()].tshirtid);
     $('#tshirts-text').html(tshirt.monthtext+' / '+tshirt.title.replace(new RegExp(' ', 'g'),'')+' / '+tshirt.remaining+'LEFT');
+    $('#kobosta_sitebundle_tshirtordertype_scount').html(getSelectOptions(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()], 's'));
+    $('#kobosta_sitebundle_tshirtordertype_mcount').html(getSelectOptions(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()], 'm'));
+    $('#kobosta_sitebundle_tshirtordertype_lcount').html(getSelectOptions(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()], 'l'));
+    $('#kobosta_sitebundle_tshirtordertype_xlcount').html(getSelectOptions(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()], 'xl'));
+    $('#kobosta_sitebundle_tshirtordertype_xxlcount').html(getSelectOptions(monthlyTshirts[pad(month.getMonth()+1, 2)+'_'+month.getFullYear()], 'xxl'));
+}
+
+function getSelectOptions(tshirt, size) {
+    var remaining = tshirt[size+'remaining'];
+    var $result = '';
+    for(var i = 0; i <= remaining; i++) {
+        $result = $result + '<option value="'+i+'">'+i+'</option>';
+    }
+    return $result
 }
 
 (function($) {

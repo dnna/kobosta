@@ -35,10 +35,33 @@ class TshirtOrder
 
     /**
      *
-     * @ORM\ManyToOne(targetEntity="Size", inversedBy="orders", cascade={"persist,detach"})
-     * @ORM\JoinColumn(name="size_id", referencedColumnName="id")
+     * @ORM\Column(name="scount", type="integer")
      */
-    private $size;
+    private $scount = 0;
+
+    /**
+     *
+     * @ORM\Column(name="mcount", type="integer")
+     */
+    private $mcount = 0;
+
+    /**
+     *
+     * @ORM\Column(name="lcount", type="integer")
+     */
+    private $lcount = 0;
+
+    /**
+     *
+     * @ORM\Column(name="xlcount", type="integer")
+     */
+    private $xlcount = 0;
+
+    /**
+     *
+     * @ORM\Column(name="xxlcount", type="integer")
+     */
+    private $xxlcount = 0;
 
     /**
      * @var string $name
@@ -83,6 +106,46 @@ class TshirtOrder
         $this->id = $id;
     }
 
+    public function getScount() {
+        return $this->scount;
+    }
+
+    public function setScount($scount) {
+        $this->scount = $scount;
+    }
+
+    public function getMcount() {
+        return $this->mcount;
+    }
+
+    public function setMcount($mcount) {
+        $this->mcount = $mcount;
+    }
+
+    public function getLcount() {
+        return $this->lcount;
+    }
+
+    public function setLcount($lcount) {
+        $this->lcount = $lcount;
+    }
+
+    public function getXlcount() {
+        return $this->xlcount;
+    }
+
+    public function setXlcount($xlcount) {
+        $this->xlcount = $xlcount;
+    }
+
+    public function getXxlcount() {
+        return $this->xxlcount;
+    }
+
+    public function setXxlcount($xxlcount) {
+        $this->xxlcount = $xxlcount;
+    }
+
     public function getDate() {
         return $this->date;
     }
@@ -97,14 +160,6 @@ class TshirtOrder
 
     public function setTshirt($tshirt) {
         $this->tshirt = $tshirt;
-    }
-
-    public function getSize() {
-        return $this->size;
-    }
-
-    public function setSize($size) {
-        $this->size = $size;
     }
 
     public function getName() {

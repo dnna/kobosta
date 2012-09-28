@@ -11,15 +11,6 @@
               <argument>KobostaAdminBundle</argument>
           </call>
       </service>
-       <service id="sonata.admin.size" class="Kobosta\AdminBundle\Admin\SizeAdmin">
-          <tag name="sonata.admin" manager_type="orm" group="Kobosta" label="Sizes"/>
-          <argument />
-          <argument>Kobosta\SiteBundle\Entity\Size</argument>
-          <argument>SonataAdminBundle:CRUD</argument>
-          <call method="setTranslationDomain">
-              <argument>KobostaAdminBundle</argument>
-          </call>
-      </service>
        <service id="sonata.admin.order" class="Kobosta\AdminBundle\Admin\OrderAdmin">
           <tag name="sonata.admin" manager_type="orm" group="Kobosta" label="Orders"/>
           <argument />

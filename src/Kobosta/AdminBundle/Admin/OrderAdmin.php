@@ -7,6 +7,8 @@ use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Show\ShowMapper;
 
+use Kobosta\SiteBundle\Entity\Tshirt;
+
 use Knp\Menu\ItemInterface as MenuItemInterface;
 
 class OrderAdmin extends Admin
@@ -22,7 +24,11 @@ class OrderAdmin extends Admin
             ->add('id')
             ->add('date')
             ->add('tshirt')
-            ->add('size')
+            ->add('scount')
+            ->add('mcount')
+            ->add('lcount')
+            ->add('xlcount')
+            ->add('xxlcount')
             ->add('name')
             ->add('surname')
             ->add('email')
@@ -41,7 +47,11 @@ class OrderAdmin extends Admin
         $formMapper
             ->add('date')
             ->add('tshirt')
-            ->add('size')
+            ->add('scount')
+            ->add('mcount')
+            ->add('lcount')
+            ->add('xlcount')
+            ->add('xxlcount')
             ->add('name')
             ->add('surname')
             ->add('email')
@@ -66,7 +76,11 @@ class OrderAdmin extends Admin
             ->addIdentifier('id')
             ->add('date')
             ->add('tshirt')
-            ->add('size')
+            ->add('scount')
+            ->add('mcount')
+            ->add('lcount')
+            ->add('xlcount')
+            ->add('xxlcount')
             ->add('name')
             ->add('surname')
             ->add('email')
@@ -86,7 +100,11 @@ class OrderAdmin extends Admin
             ->add('id')
             ->add('date')
             ->add('tshirt')
-            ->add('size')
+            ->add('scount')
+            ->add('mcount')
+            ->add('lcount')
+            ->add('xlcount')
+            ->add('xxlcount')
             ->add('name')
             ->add('surname')
             ->add('email')

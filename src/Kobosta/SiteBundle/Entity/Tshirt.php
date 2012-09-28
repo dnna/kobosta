@@ -14,6 +14,12 @@ use Symfony\Component\Validator\Constraints as Assert;
  */
 class Tshirt
 {
+    const S_SMALL = 's';
+    const S_MEDIUM = 'm';
+    const S_LARGE = 'l';
+    const S_EXTRALARGE = 'xl';
+    const S_EXTRAEXTRALARGE = 'xxl';
+
     /**
      * @var integer $id
      *
@@ -70,18 +76,33 @@ class Tshirt
 
     /**
      *
-     * @ORM\Column(name="stock", type="integer")
+     * @ORM\Column(name="sstock", type="integer")
      */
-    private $stock;
+    private $sstock;
 
-     /**
-     * @ORM\ManyToMany(targetEntity="Size")
-     * @ORM\JoinTable(name="tshirt_sizes",
-     *      joinColumns={@ORM\JoinColumn(name="tshirt_id", referencedColumnName="id", onDelete="CASCADE")},
-     *      inverseJoinColumns={@ORM\JoinColumn(name="size_id", referencedColumnName="id")}
-     *      )
+    /**
+     *
+     * @ORM\Column(name="mstock", type="integer")
      */
-    private $sizes;
+    private $mstock;
+
+    /**
+     *
+     * @ORM\Column(name="lstock", type="integer")
+     */
+    private $lstock;
+
+    /**
+     *
+     * @ORM\Column(name="xlstock", type="integer")
+     */
+    private $xlstock;
+
+    /**
+     *
+     * @ORM\Column(name="xxlstock", type="integer")
+     */
+    private $xxlstock;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -177,20 +198,48 @@ class Tshirt
         $this->price = $price;
     }
 
+    public function getSstock() {
+        return $this->sstock;
+    }
+
+    public function setSstock($sstock) {
+        $this->sstock = $sstock;
+    }
+
+    public function getMstock() {
+        return $this->mstock;
+    }
+
+    public function setMstock($mstock) {
+        $this->mstock = $mstock;
+    }
+
+    public function getLstock() {
+        return $this->lstock;
+    }
+
+    public function setLstock($lstock) {
+        $this->lstock = $lstock;
+    }
+
+    public function getXlstock() {
+        return $this->xlstock;
+    }
+
+    public function setXlstock($xlstock) {
+        $this->xlstock = $xlstock;
+    }
+
+    public function getXxlstock() {
+        return $this->xxlstock;
+    }
+
+    public function setXxlstock($xxlstock) {
+        $this->xxlstock = $xxlstock;
+    }
+
     public function getStock() {
-        return $this->stock;
-    }
-
-    public function setStock($stock) {
-        $this->stock = $stock;
-    }
-
-    public function getSizes() {
-        return $this->sizes;
-    }
-
-    public function setSizes($sizes) {
-        $this->sizes = $sizes;
+        return ($this->sstock + $this->mstock + $this->lstock + $this->xlstock + $this->xxlstock);
     }
 
     public function getOrders() {
@@ -220,7 +269,47 @@ class Tshirt
     }
 
     public function getRemaining() {
-        return ($this->stock - $this->orders->count());
+        return ($this->getRemainingS() + $this->getRemainingM() + $this->getRemainingL() + $this->getRemainingXL() + $this->getRemainingXXL());
+    }
+
+    public function getRemainingS() {
+        $taken = 0;
+        foreach($this->orders as $curOrder) {
+            $taken = $taken + $curOrder->getScount();
+        }
+        return $this->getSstock() - $taken;
+    }
+
+    public function getRemainingM() {
+        $taken = 0;
+        foreach($this->orders as $curOrder) {
+            $taken = $taken + $curOrder->getMcount();
+        }
+        return $this->getMstock() - $taken;
+    }
+
+    public function getRemainingL() {
+        $taken = 0;
+        foreach($this->orders as $curOrder) {
+            $taken = $taken + $curOrder->getLcount();
+        }
+        return $this->getLstock() - $taken;
+    }
+
+    public function getRemainingXL() {
+        $taken = 0;
+        foreach($this->orders as $curOrder) {
+            $taken = $taken + $curOrder->getXlcount();
+        }
+        return $this->getXlstock() - $taken;
+    }
+
+    public function getRemainingXXL() {
+        $taken = 0;
+        foreach($this->orders as $curOrder) {
+            $taken = $taken + $curOrder->getXxlcount();
+        }
+        return $this->getXxlstock() - $taken;
     }
 
     public function getLogoAbsolutePath()
@@ -316,6 +405,16 @@ class Tshirt
     {
         $this->removeLogoUpload();
         $this->removeFabricUpload();
+    }
+
+    public static function getSizes() {
+        return array(
+            self::S_SMALL,
+            self::S_MEDIUM,
+            self::S_LARGE,
+            self::S_EXTRALARGE,
+            self::S_EXTRAEXTRALARGE
+        );
     }
 
     public function __toString() {

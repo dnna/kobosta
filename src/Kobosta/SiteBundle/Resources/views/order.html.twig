@@ -16,7 +16,11 @@
             <form id="order-form" action="{{ path('order') }}" method="post" {{ form_enctype(form) }}>
                 {{ form_widget(form) }}
                 <p>
-                    <input type="submit" value="" />
+                    {% if app.session.hasFlash('orderdone') %}
+                        <span id="order_done">{{ texts.find('order_done').text | raw }}</span>
+                    {% else %}
+                        <input type="submit" value="" />
+                    {% endif %}
                 </p>
             </form>
             {#<img src="{{asset('public/images/order/SIZE_T_SHIRT.png')}}" alt="sizes" class="sizesshirt" />#}

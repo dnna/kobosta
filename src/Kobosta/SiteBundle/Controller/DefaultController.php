@@ -32,8 +32,9 @@ class DefaultController extends Controller
             $entity->setDate(new \DateTime());
             $em->persist($entity);
             $em->flush();
+            $this->get('session')->setFlash('orderdone', 'order_done');
         }
         
-        return $this->redirect($this->generateUrl('home'));
+        return $this->redirect($this->generateUrl('home').'#!order');
     }
 }
